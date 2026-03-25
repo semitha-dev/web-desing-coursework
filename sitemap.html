@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,6 +45,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ===================================================
@@ -52,7 +54,7 @@
     <header class="site-header">
         <div class="container header-top">
             <div class="brand">
-                <img src="images/gallery/logo.png" alt="SDG Action Hub logo — a globe with colourful SDG segments" class="logo">
+                <img src="images/logo.png" alt="SDG Action Hub logo — a globe with colourful SDG segments" class="logo">
                 <div class="brand-text">
                     <h1>SDG Action Hub</h1>
                     <p>Small Actions, Big Impact</p>
@@ -96,159 +98,177 @@
         <section class="sitemap-svg-wrapper">
 
             <!-- SVG SITEMAP — required by spec Section 4.9 (20 marks) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img" aria-label="Graphical sitemap of SDG Action Hub website">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img"
+                aria-label="Graphical sitemap of SDG Action Hub website">
                 <title>SDG Action Hub — Site Map</title>
 
                 <defs>
                     <style>
-                        .node     { rx: 8; ry: 8; stroke-width: 1.5; }
-                        .label    { font-family: Arial, sans-serif; text-anchor: middle; dominant-baseline: central; }
-                        .line     { stroke: #90A4AE; stroke-width: 2; fill: none; }
+                        .node {
+                            rx: 8;
+                            ry: 8;
+                            stroke-width: 1.5;
+                        }
+
+                        .label {
+                            font-family: Arial, sans-serif;
+                            text-anchor: middle;
+                            dominant-baseline: central;
+                        }
+
+                        .line {
+                            stroke: #90A4AE;
+                            stroke-width: 2;
+                            fill: none;
+                        }
                     </style>
                 </defs>
 
                 <!-- ===== LEVEL 0 — SPLASH ===== -->
                 <a href="splash.html">
-                    <rect x="390" y="15" width="180" height="38" class="node" fill="#0277BD" stroke="#01579B"/>
+                    <rect x="390" y="15" width="180" height="38" class="node" fill="#0277BD" stroke="#01579B" />
                     <text x="480" y="34" class="label" fill="#fff" font-size="14">Splash Screen</text>
                 </a>
-                <line x1="480" y1="53" x2="480" y2="75" class="line"/>
+                <line x1="480" y1="53" x2="480" y2="75" class="line" />
 
                 <!-- ===== LEVEL 1 — HOME ===== -->
                 <a href="home.html">
-                    <rect x="380" y="75" width="200" height="42" class="node" fill="#00897B" stroke="#00695C"/>
+                    <rect x="380" y="75" width="200" height="42" class="node" fill="#00897B" stroke="#00695C" />
                     <text x="480" y="96" class="label" fill="#fff" font-size="15" font-weight="bold">Home</text>
                 </a>
-                <line x1="480" y1="117" x2="480" y2="140" class="line"/>
+                <line x1="480" y1="117" x2="480" y2="140" class="line" />
 
                 <!-- Horizontal bar spanning all 7 columns -->
-                <line x1="70" y1="140" x2="890" y2="140" class="line"/>
+                <line x1="70" y1="140" x2="890" y2="140" class="line" />
                 <!-- Drops -->
-                <line x1="70"  y1="140" x2="70"  y2="158" class="line"/>
-                <line x1="206" y1="140" x2="206" y2="158" class="line"/>
-                <line x1="343" y1="140" x2="343" y2="158" class="line"/>
-                <line x1="480" y1="140" x2="480" y2="158" class="line"/>
-                <line x1="617" y1="140" x2="617" y2="158" class="line"/>
-                <line x1="753" y1="140" x2="753" y2="158" class="line"/>
-                <line x1="890" y1="140" x2="890" y2="158" class="line"/>
+                <line x1="70" y1="140" x2="70" y2="158" class="line" />
+                <line x1="206" y1="140" x2="206" y2="158" class="line" />
+                <line x1="343" y1="140" x2="343" y2="158" class="line" />
+                <line x1="480" y1="140" x2="480" y2="158" class="line" />
+                <line x1="617" y1="140" x2="617" y2="158" class="line" />
+                <line x1="753" y1="140" x2="753" y2="158" class="line" />
+                <line x1="890" y1="140" x2="890" y2="158" class="line" />
 
                 <!-- ===== LEVEL 2 — MAIN PAGES (7 boxes, 130 wide, 6px gap) ===== -->
                 <a href="ais.html">
-                    <rect x="5" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1"/>
+                    <rect x="5" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1" />
                     <text x="70" y="177" class="label" fill="#fff" font-size="11">Action Impact Sim</text>
                 </a>
                 <a href="gallery.html">
-                    <rect x="141" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1"/>
+                    <rect x="141" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1" />
                     <text x="206" y="177" class="label" fill="#fff" font-size="12">Gallery</text>
                 </a>
                 <a href="profile.html">
-                    <rect x="278" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1"/>
+                    <rect x="278" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1" />
                     <text x="343" y="177" class="label" fill="#fff" font-size="12">User Profile</text>
                 </a>
                 <a href="feedback.html">
-                    <rect x="415" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1"/>
+                    <rect x="415" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1" />
                     <text x="480" y="177" class="label" fill="#fff" font-size="12">Feedback</text>
                 </a>
                 <a href="team.html">
-                    <rect x="552" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1"/>
+                    <rect x="552" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1" />
                     <text x="617" y="177" class="label" fill="#fff" font-size="12">Team</text>
                 </a>
                 <a href="sitemap.html">
-                    <rect x="688" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1"/>
+                    <rect x="688" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1" />
                     <text x="753" y="177" class="label" fill="#fff" font-size="12">Sitemap</text>
                 </a>
-                <rect x="825" y="158" width="130" height="38" class="node" fill="#2E7D32" stroke="#1B5E20"/>
+                <rect x="825" y="158" width="130" height="38" class="node" fill="#2E7D32" stroke="#1B5E20" />
                 <text x="890" y="177" class="label" fill="#fff" font-size="12">Content Pages</text>
 
                 <!-- ===== LEVEL 3 — CONTENT PAGES (below, full width row of 4) ===== -->
                 <!-- Trunk from "Content Pages" down to row -->
-                <line x1="890" y1="196" x2="890" y2="220" class="line"/>
+                <line x1="890" y1="196" x2="890" y2="220" class="line" />
                 <!-- Bend left to centre of the 4-box row -->
-                <line x1="480" y1="220" x2="890" y2="220" class="line"/>
+                <line x1="480" y1="220" x2="890" y2="220" class="line" />
                 <!-- Drops to 4 content boxes (each 210 wide, spaced at x=20,240,460,680) -->
-                <line x1="125" y1="220" x2="125" y2="240" class="line"/>
-                <line x1="365" y1="220" x2="365" y2="240" class="line"/>
-                <line x1="605" y1="220" x2="605" y2="240" class="line"/>
-                <line x1="845" y1="220" x2="845" y2="240" class="line"/>
+                <line x1="125" y1="220" x2="125" y2="240" class="line" />
+                <line x1="365" y1="220" x2="365" y2="240" class="line" />
+                <line x1="605" y1="220" x2="605" y2="240" class="line" />
+                <line x1="845" y1="220" x2="845" y2="240" class="line" />
                 <!-- Extend horizontal bar to cover all 4 -->
-                <line x1="125" y1="220" x2="845" y2="220" class="line"/>
+                <line x1="125" y1="220" x2="845" y2="220" class="line" />
 
                 <a href="content_ST1.html">
-                    <rect x="20" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32"/>
+                    <rect x="20" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32" />
                     <text x="125" y="255" class="label" fill="#fff" font-size="11">Ocean Pollution</text>
                     <text x="125" y="271" class="label" fill="#E8F5E9" font-size="9">(PVS Kithnuka)</text>
                 </a>
                 <a href="content_ST2.html">
-                    <rect x="260" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32"/>
+                    <rect x="260" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32" />
                     <text x="365" y="255" class="label" fill="#fff" font-size="11">Marine Protected Areas</text>
                     <text x="365" y="271" class="label" fill="#E8F5E9" font-size="9">(Sasthindu)</text>
                 </a>
                 <a href="content_ST3.html">
-                    <rect x="500" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32"/>
+                    <rect x="500" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32" />
                     <text x="605" y="255" class="label" fill="#fff" font-size="11">The Overfishing Crisis</text>
                     <text x="605" y="271" class="label" fill="#E8F5E9" font-size="9">(Esandu)</text>
                 </a>
                 <a href="content_ST4.html">
-                    <rect x="740" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32"/>
+                    <rect x="740" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32" />
                     <text x="845" y="255" class="label" fill="#fff" font-size="11">Coral Reef Restoration</text>
                     <text x="845" y="271" class="label" fill="#E8F5E9" font-size="9">(Liyanaarachchi)</text>
                 </a>
 
                 <!-- ===== LEVEL 4 — PAGE EDITORS & VALIDATION ===== -->
                 <!-- Background grouping box -->
-                <rect x="15" y="310" width="930" height="130" rx="10" ry="10" fill="#ECEFF1" stroke="#B0BEC5" stroke-width="1"/>
-                <text x="480" y="332" class="label" font-size="13" fill="#546E7A" font-weight="bold">Page Editors &amp; Validation</text>
+                <rect x="15" y="310" width="930" height="130" rx="10" ry="10" fill="#ECEFF1" stroke="#B0BEC5"
+                    stroke-width="1" />
+                <text x="480" y="332" class="label" font-size="13" fill="#546E7A" font-weight="bold">Page Editors &amp;
+                    Validation</text>
 
                 <!-- Page Editor row (4 boxes) -->
                 <a href="pageEditor_ST1.html">
-                    <rect x="30" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00"/>
+                    <rect x="30" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00" />
                     <text x="135" y="361" class="label" fill="#fff" font-size="11">Page Editor — ST1</text>
                 </a>
                 <a href="pageEditor_ST2.html">
-                    <rect x="260" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00"/>
+                    <rect x="260" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00" />
                     <text x="365" y="361" class="label" fill="#fff" font-size="11">Page Editor — ST2</text>
                 </a>
                 <a href="pageEditor_ST3.html">
-                    <rect x="490" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00"/>
+                    <rect x="490" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00" />
                     <text x="595" y="361" class="label" fill="#fff" font-size="11">Page Editor — ST3</text>
                 </a>
                 <a href="pageEditor_ST4.html">
-                    <rect x="720" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00"/>
+                    <rect x="720" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00" />
                     <text x="825" y="361" class="label" fill="#fff" font-size="11">Page Editor — ST4</text>
                 </a>
 
                 <!-- Validation row (4 boxes) -->
                 <a href="validation_ST1.html">
-                    <rect x="30" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E"/>
+                    <rect x="30" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E" />
                     <text x="135" y="406" class="label" fill="#fff" font-size="11">Validation — ST1</text>
                 </a>
                 <a href="validation_ST2.html">
-                    <rect x="260" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E"/>
+                    <rect x="260" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E" />
                     <text x="365" y="406" class="label" fill="#fff" font-size="11">Validation — ST2</text>
                 </a>
                 <a href="validation_ST3.html">
-                    <rect x="490" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E"/>
+                    <rect x="490" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E" />
                     <text x="595" y="406" class="label" fill="#fff" font-size="11">Validation — ST3</text>
                 </a>
                 <a href="validation_ST4.html">
-                    <rect x="720" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E"/>
+                    <rect x="720" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E" />
                     <text x="825" y="406" class="label" fill="#fff" font-size="11">Validation — ST4</text>
                 </a>
 
                 <!-- ===== LEGEND ===== -->
-                <rect x="200" y="470" width="560" height="50" rx="8" ry="8" fill="#FAFAFA" stroke="#CFD8DC"/>
-                <text x="225" y="490" font-family="Arial, sans-serif" font-size="11" fill="#37474F" font-weight="bold">Legend:</text>
-                <rect x="280" y="482" width="14" height="14" rx="3" fill="#0277BD"/>
+                <rect x="200" y="470" width="560" height="50" rx="8" ry="8" fill="#FAFAFA" stroke="#CFD8DC" />
+                <text x="225" y="490" font-family="Arial, sans-serif" font-size="11" fill="#37474F"
+                    font-weight="bold">Legend:</text>
+                <rect x="280" y="482" width="14" height="14" rx="3" fill="#0277BD" />
                 <text x="298" y="493" font-family="Arial, sans-serif" font-size="10" fill="#546E7A">Entry</text>
-                <rect x="340" y="482" width="14" height="14" rx="3" fill="#00897B"/>
+                <rect x="340" y="482" width="14" height="14" rx="3" fill="#00897B" />
                 <text x="358" y="493" font-family="Arial, sans-serif" font-size="10" fill="#546E7A">Home</text>
-                <rect x="400" y="482" width="14" height="14" rx="3" fill="#1565C0"/>
+                <rect x="400" y="482" width="14" height="14" rx="3" fill="#1565C0" />
                 <text x="418" y="493" font-family="Arial, sans-serif" font-size="10" fill="#546E7A">Main Pages</text>
-                <rect x="492" y="482" width="14" height="14" rx="3" fill="#43A047"/>
+                <rect x="492" y="482" width="14" height="14" rx="3" fill="#43A047" />
                 <text x="510" y="493" font-family="Arial, sans-serif" font-size="10" fill="#546E7A">Content</text>
-                <rect x="565" y="482" width="14" height="14" rx="3" fill="#FF8F00"/>
+                <rect x="565" y="482" width="14" height="14" rx="3" fill="#FF8F00" />
                 <text x="583" y="493" font-family="Arial, sans-serif" font-size="10" fill="#546E7A">Editors</text>
-                <rect x="635" y="482" width="14" height="14" rx="3" fill="#6D4C41"/>
+                <rect x="635" y="482" width="14" height="14" rx="3" fill="#6D4C41" />
                 <text x="653" y="493" font-family="Arial, sans-serif" font-size="10" fill="#546E7A">Validation</text>
 
             </svg>
@@ -267,7 +287,8 @@
         <div class="container footer-grid">
             <div>
                 <h3>About This Site</h3>
-                <p>SDG Action Hub is a student project designed to promote action-based awareness and participation in sustainability goals.</p>
+                <p>SDG Action Hub is a student project designed to promote action-based awareness and participation in
+                    sustainability goals.</p>
             </div>
             <div>
                 <h3>Useful Links</h3>
@@ -293,4 +314,5 @@
     ==================================================== -->
 
 </body>
+
 </html>

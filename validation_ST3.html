@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validation Page — Esandu</title>
     <link rel="stylesheet" href="css/pageEditor_validator.css">
 </head>
+
 <body>
-    <header id="top"><h1>SDG Action Hub — Validation Report</h1></header>
-    <section class="stud"><h2>Esandu (20241244) | Team SDG14 | Feedback &amp; Team Page</h2></section>
+    <header id="top">
+        <h1>SDG Action Hub — Validation Report</h1>
+    </header>
+    <section class="stud">
+        <h2>Esandu (20241244) | Team SDG14 | Feedback &amp; Team Page</h2>
+    </section>
 
     <div class="container">
         <main>
             <section>
                 <h2 id="feedbackVal">Feedback Page Validation Report</h2>
-                <p>The Feedback &amp; Programme Directory page was validated with no errors. Form elements including fieldset, legend, and all input types (text, email, tel, date, datetime-local, textarea, select) passed validation. The novalidate attribute on the form is valid HTML5.</p>
-                <img src="validationSnapshots/val_feedback.png" alt="W3C validation results for feedback.html showing no errors">
+                <p>The Feedback &amp; Programme Directory page was validated with no errors. Form elements including
+                    fieldset, legend, and all input types (text, email, tel, date, datetime-local, textarea, select)
+                    passed validation. The novalidate attribute on the form is valid HTML5.</p>
+                <img src="validationSnapshots/feedback.jpg"
+                    alt="W3C validation results for feedback.html showing no errors">
                 <h3>Back to Page Editor</h3>
-                <p><a href="pageEditor_ST3.html#feedback">View Feedback Page technical description in Page Editor</a></p>
+                <p><a href="pageEditor_ST3.html#feedback">View Feedback Page technical description in Page Editor</a>
+                </p>
             </section>
 
             <section>
                 <h2 id="teamVal">Team Page Validation Report</h2>
-                <p>The Team Page passed validation with no errors. The tabindex attributes on team member blocks and the CSS-only interactivity approach are fully compliant with HTML5 standards.</p>
-                <img src="validationSnapshots/val_team.png" alt="W3C validation results for team.html showing no errors">
+                <p>The Team Page passed validation with no errors. The tabindex attributes on team member blocks and the
+                    CSS-only interactivity approach are fully compliant with HTML5 standards.</p>
+                <img src="validationSnapshots/val_team.png"
+                    alt="W3C validation results for team.html showing no errors">
                 <h3>Back to Page Editor</h3>
                 <p><a href="pageEditor_ST3.html#team">View Team Page technical description in Page Editor</a></p>
             </section>
 
             <section>
                 <h2 id="contentVal">Content Page Validation Report</h2>
-                <p>The Content Page (Overfishing Crisis) validated with no errors. Heading hierarchy is correct, all images have alt attributes, and the fixed-position "Go to Top" button uses valid HTML and CSS.</p>
-                <img src="validationSnapshots/val_content_ST3.png" alt="W3C validation results for content_ST3.html showing no errors">
+                <p>The Content Page (Overfishing Crisis) validated with no errors. Heading hierarchy is correct, all
+                    images have alt attributes, and the fixed-position "Go to Top" button uses valid HTML and CSS.</p>
+                <img src="validationSnapshots/val_content_ST3.png"
+                    alt="W3C validation results for content_ST3.html showing no errors">
                 <h3>Back to Page Editor</h3>
                 <p><a href="pageEditor_ST3.html#content">View Content Page technical description in Page Editor</a></p>
             </section>
 
             <section>
                 <h2 id="reflection">Reflection on Validation</h2>
-                <p>The feedback form initially had a validation error because I used a <code>&lt;label&gt;</code> element without a matching <code>for</code> attribute on one field. Adding the correct <code>for</code> attribute resolved the issue. I also discovered that the <code>maxlength</code> attribute on a textarea must be a non-negative integer, which I had initially left empty. Setting it to <code>500</code> fixed the error.</p>
-                <p>This process taught me to validate incrementally as I add form elements rather than waiting until the entire form is complete.</p>
+                <p>The feedback form initially had a validation error because I used a <code>&lt;label&gt;</code>
+                    element without a matching <code>for</code> attribute on one field. Adding the correct
+                    <code>for</code> attribute resolved the issue. I also discovered that the <code>maxlength</code>
+                    attribute on a textarea must be a non-negative integer, which I had initially left empty. Setting it
+                    to <code>500</code> fixed the error.</p>
+                <p>This process taught me to validate incrementally as I add form elements rather than waiting until the
+                    entire form is complete.</p>
             </section>
 
             <p class="top"><a href="#top">Go top</a></p>
@@ -60,4 +79,5 @@
         <p><a href="pageEditor_ST3.html">Back to Page Editor</a> | &copy; 2026 SDG Action Hub — Esandu</p>
     </footer>
 </body>
+
 </html>

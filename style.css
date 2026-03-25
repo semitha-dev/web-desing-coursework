@@ -104,8 +104,8 @@ h3 {
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     background: var(--white);
@@ -138,6 +138,7 @@ h3 {
     gap: 0;
     margin: 0;
     padding: 0;
+
 }
 
 .nav-link {
@@ -149,6 +150,7 @@ h3 {
     font-weight: 500;
     font-size: 0.9rem;
     transition: var(--transition);
+
 }
 
 .nav-link:hover,
@@ -283,7 +285,8 @@ button:hover,
 .btn:hover,
 button:focus,
 .btn:focus {
-    background-color: var(--secondary-color);
+    background-color: rgb(10, 56, 6);
+    color: rgb(255, 255, 255);
     outline: none;
 }
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,29 +13,36 @@
     <style>
         /* Scrollable programme cards section */
         .programme-section {
-            max-height: 520px;
-            overflow-y: auto;
-            padding-right: 8px;
             margin-bottom: 30px;
-        }
-
-        .programme-section::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .programme-section::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 10px;
         }
 
         /* Programme card layout */
         .programme-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 50px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .programme-cards::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+
+        .programme-cards::-webkit-scrollbar-track {
+            background: var(--border-color);
+            border-radius: 10px;
+        }
+
+        .programme-cards::-webkit-scrollbar-thumb {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
         }
 
         .programme-card {
+            flex: 0 0 300px;
+            scroll-snap-align: start;
             background: var(--white);
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
@@ -43,12 +51,12 @@
         }
 
         .programme-card:hover {
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            box-shadow: 10px 10px 0 rgba(27, 78, 30, 0.5);
         }
 
         .programme-card img {
             width: 100%;
-            height: 140px;
+            height: 200px;
             object-fit: cover;
         }
 
@@ -117,12 +125,31 @@
         }
 
         .review-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            display: flex;
+            overflow-x: auto;
             gap: 18px;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .review-cards::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+
+        .review-cards::-webkit-scrollbar-track {
+            background: var(--border-color);
+            border-radius: 10px;
+        }
+
+        .review-cards::-webkit-scrollbar-thumb {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
         }
 
         .review-card {
+            flex: 0 0 280px;
+            scroll-snap-align: start;
             background: var(--white);
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
@@ -218,6 +245,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ===================================================
@@ -226,7 +254,8 @@
     <header class="site-header">
         <div class="container header-top">
             <div class="brand">
-                <img src="images/logo.png" alt="SDG Action Hub logo — a globe with colourful SDG segments" class="logo">
+                <img src="images/gallery/logo.png" alt="SDG Action Hub logo — a globe with colourful SDG segments"
+                    class="logo">
                 <div class="brand-text">
                     <h1>SDG Action Hub</h1>
                     <p>Small Actions, Big Impact</p>
@@ -285,17 +314,20 @@
 
                 <!-- Programme 1 -->
                 <div class="programme-card">
-                    <img src="images/content/beach-cleanup-programme.jpg" alt="Volunteers on a beach collecting plastic waste during a cleanup event">
+                    <img src="images/gallery/Coastal%20Cleanup%20Crew.jpg"
+                        alt="Volunteers on a beach collecting plastic waste during a cleanup event">
                     <div class="programme-card-body">
                         <h4>Coastal Cleanup Crew</h4>
-                        <p>Join weekly beach cleanups along the UK coastline. Open to students and families. No experience needed.</p>
+                        <p>Join weekly beach cleanups along the UK coastline. Open to students and families. No
+                            experience needed.</p>
                         <a href="#" class="btn">Get Involved</a>
                     </div>
                 </div>
 
                 <!-- Programme 2 -->
                 <div class="programme-card">
-                    <img src="images/content/coral-planting.jpg" alt="Diver underwater planting coral fragments onto a reef structure">
+                    <img src="images/gallery/Coral%20Restoration%20Project.jpg"
+                        alt="Diver underwater planting coral fragments onto a reef structure">
                     <div class="programme-card-body">
                         <h4>Coral Restoration Project</h4>
                         <p>Support coral planting in the Caribbean through donations or volunteer diving trips during
@@ -306,20 +338,24 @@
 
                 <!-- Programme 3 -->
                 <div class="programme-card">
-                    <img src="images/content/marine-education.jpg" alt="Students attending a marine biology workshop with an educator">
+                    <img src="images/gallery/Marine%20Education%20Workshops.jpg"
+                        alt="Students attending a marine biology workshop with an educator">
                     <div class="programme-card-body">
                         <h4>Marine Education Workshops</h4>
-                        <p>Free workshops for university students on ocean science, policy, and practical conservation skills.</p>
+                        <p>Free workshops for university students on ocean science, policy, and practical conservation
+                            skills.</p>
                         <a href="#" class="btn">Join</a>
                     </div>
                 </div>
 
                 <!-- Programme 4 -->
                 <div class="programme-card">
-                    <img src="images/content/plastic-free-campus.jpg" alt="University campus with recycling stations and reusable cup dispenser">
+                    <img src="images/gallery/Plastic-Free%20Campus%20Pledge.jpg"
+                        alt="University campus with recycling stations and reusable cup dispenser">
                     <div class="programme-card-body">
                         <h4>Plastic-Free Campus Pledge</h4>
-                        <p>Partner with your student union to eliminate single-use plastics from campus facilities and events.</p>
+                        <p>Partner with your student union to eliminate single-use plastics from campus facilities and
+                            events.</p>
                         <a href="#" class="btn">Get Involved</a>
                     </div>
                 </div>
@@ -333,7 +369,7 @@
 
             <div class="overall-rating">
                 <div>
-                    <span class="big-score">8.6</span><span>/10</span>
+                    <span class="big-score">8.9</span><span>/10</span>
                 </div>
                 <div>
                     <p class="rating-label">Excellent</p>
@@ -347,34 +383,63 @@
                 <div class="review-card">
                     <div class="review-rating">9/10 Outstanding</div>
                     <h4>Life-changing experience</h4>
-                    <p>The beach cleanup programme opened my eyes to how much waste ends up in our oceans. I now carry a reusable kit everywhere.
+                    <p>The beach cleanup programme opened my eyes to how much waste ends up in our oceans. I now carry a
+                        reusable kit everywhere.
                         <a href="#">See more</a>
                     </p>
-                    <p class="reviewer">Sarah M.</p>
-                    <p class="review-date">15 Feb 2026</p>
+                    <p class="reviewer">Nimuthu.P</p>
+                    <p class="review-date">15 March 2026</p>
                 </div>
 
                 <!-- Review 2 -->
                 <div class="review-card">
                     <div class="review-rating">8/10 Excellent</div>
                     <h4>Great for students</h4>
-                    <p>The marine education workshop was well organised and highly informative. Tutors were patient and passionate about ocean science.
+                    <p>The marine education workshop was well organised and highly informative. Tutors were patient and
+                        passionate about ocean science.
                         <a href="#">See more</a>
                     </p>
-                    <p class="reviewer">James L.</p>
-                    <p class="review-date">28 Jan 2026</p>
+                    <p class="reviewer">Senuda.W</p>
+                    <p class="review-date">18 March 2026</p>
                 </div>
 
                 <!-- Review 3 -->
                 <div class="review-card">
                     <div class="review-rating">9/10 Outstanding</div>
                     <h4>Rewarding volunteer work</h4>
-                    <p>Volunteering for coral restoration was an incredible experience. Seeing new corals being planted gave me real hope for our reefs.
+                    <p>Volunteering for coral restoration was an incredible experience. Seeing new corals being planted
+                        gave me real hope for our reefs.
                         <a href="#">See more</a>
                     </p>
-                    <p class="reviewer">Amira K.</p>
-                    <p class="review-date">10 Jan 2026</p>
+                    <p class="reviewer"> Janith.R</p>
+                    <p class="review-date">20 March 2026</p>
                 </div>
+
+                <!--Review 4-->
+                <div class="review-card">
+                    <div class="review-rating">10/10 Outstanding</div>
+                    <h4>Best experience ever</h4>
+                    <p>I had the best experience volunteering for the coral restoration project. The team was friendly
+                        and the work was rewarding.
+                        <a href="#">See more</a>
+                    </p>
+                    <p class="reviewer">Inuka.P.</p>
+                    <p class="review-date">22 March 2026</p>
+
+
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rating">7/10 Outstanding</div>
+                    <h4>Good experience</h4>
+                    <p>The experience was good and the team was friendly.
+                        <a href="#">See more</a>
+                    </p>
+                    <p class="reviewer">Anonymous User.</p>
+                    <p class="review-date">28 March 2026</p>
+                </div>
+
+
 
             </div>
         </section>
@@ -440,7 +505,8 @@
 
                     <div class="form-group">
                         <label for="message">Your Feedback</label>
-                        <textarea id="message" name="message" rows="5" maxlength="500" required placeholder="Tell us what you think..."></textarea>
+                        <textarea id="message" name="message" rows="5" maxlength="500" required
+                            placeholder="Tell us what you think..."></textarea>
                         <p class="char-counter"><span id="charCount">500</span> characters remaining</p>
                         <p class="error-msg" id="messageError">Please enter your feedback (at least 10 characters).</p>
                     </div>
@@ -467,7 +533,8 @@
         <div class="container footer-grid">
             <div>
                 <h3>About This Site</h3>
-                <p>SDG Action Hub is a student project designed to promote action-based awareness and participation in sustainability goals.</p>
+                <p>SDG Action Hub is a student project designed to promote action-based awareness and participation in
+                    sustainability goals.</p>
             </div>
             <div>
                 <h3>Useful Links</h3>
@@ -481,7 +548,7 @@
                 <h3>Student Details</h3>
                 <p>Name: Esandu (20241244)</p>
                 <p>Role: Feedback &amp; Team Page</p>
-                <p>Email: esandu@email.com</p>
+                <p>Email: esandu20241244@iit.ac.lk</p>
             </div>
         </div>
         <div class="container footer-bottom">
@@ -496,4 +563,5 @@
     <script src="js/feedback.js"></script>
 
 </body>
+
 </html>

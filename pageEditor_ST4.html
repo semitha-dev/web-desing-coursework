@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor — Liyanaarachchi</title>
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+</head>
+<body>
+    <header id="top"><h1>SDG Action Hub — Page Editor</h1></header>
+    <section class="stud"><h2>Liyanaarachchi (20240077) | Team SDG14 | User Profile &amp; Sitemap</h2></section>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2 id="profile">User Profile Page</h2>
+                <h3>Technical Description</h3>
+                <p>The User Profile page demonstrates JavaScript-driven interaction using <code>prompt()</code> to progressively collect user information and dynamically build a profile display.</p>
+                <p><strong>HTML Structure:</strong> The page uses the shared template with a control area (Start, Reset, step buttons, revisit buttons), a progress indicator with a visual bar, and a profile output area with three hidden step sections revealed progressively.</p>
+                <p><strong>JavaScript Implementation:</strong> A <code>profileData</code> object stores all user responses across three steps, each containing three prompts. Functions <code>runStep1()</code>, <code>runStep2()</code>, and <code>runStep3()</code> use <code>prompt()</code> to collect data step-by-step. Users can skip prompts by leaving them blank (null check and trim). The <code>updateDisplay()</code> function counts non-null values to calculate completion percentage, updates the progress bar width via <code>style.width</code>, shows/hides profile sections using <code>classList.add('visible')</code>, and displays a confirmation message at 100% completion.</p>
+                <p><strong>User Control:</strong> Users can skip individual prompts or entire steps. Revisit buttons allow returning to any step to fill in previously skipped prompts. Skipped values display "(skipped)" in the output. The progress indicator adjusts dynamically — incomplete prompts reduce the completion percentage. A reset button clears all data and hides all output sections.</p>
+                <p><strong>CSS:</strong> An external page-specific CSS file (<code>css/profile.css</code>) handles the progress bar gradient animation, step button states (completed/skipped), profile output sections with left border accents, and the confirmation section.</p>
+
+                <h3>Accessibility</h3>
+                <p>All visible content uses clear labels and descriptive text. Instructions explain the prompt-based workflow. The progress indicator provides both visual (bar) and text (percentage + count) feedback. Button labels are descriptive.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST4.html#profileVal">View Profile Page validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="profile.html" target="_blank">Open User Profile Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="sitemap">Sitemap Page (SVG)</h2>
+                <h3>Technical Description</h3>
+                <p>The Sitemap page displays a graphical representation of the website hierarchy using inline SVG.</p>
+                <p><strong>SVG Structure:</strong> The sitemap uses <code>&lt;svg viewBox="0 0 960 700"&gt;</code> for responsiveness. Nodes are represented as <code>&lt;rect&gt;</code> elements with rounded corners (<code>rx="10"</code>) wrapped in <code>&lt;a&gt;</code> links to the corresponding pages. <code>&lt;line&gt;</code> elements connect parent and child nodes. <code>&lt;text&gt;</code> elements label each node.</p>
+                <p><strong>Hierarchy:</strong> The sitemap shows: Splash Screen → Home Page → main pages (AIS, Gallery, Profile, Feedback, Team, Sitemap) → Content Pages (4) → Page Editors (4) → Validation Pages (4). Dashed lines distinguish content pages from main navigation pages.</p>
+                <p><strong>Interactivity:</strong> Each node links to its corresponding page using SVG <code>&lt;a&gt;</code> elements. Hover effects change fill colour and stroke width via CSS. <code>&lt;title&gt;</code> elements inside each link provide accessible names for screen readers.</p>
+                <p><strong>Responsiveness:</strong> The <code>viewBox</code> attribute combined with <code>width: 100%; max-width: 1000px; height: auto</code> in CSS ensures the SVG scales proportionally on all screen sizes.</p>
+
+                <h3>Accessibility</h3>
+                <p>The SVG has <code>role="img"</code> and <code>aria-label</code>. Each clickable node contains a <code>&lt;title&gt;</code> element. Links are keyboard-navigable via Tab. Focus states are styled with an outline. Text labels are visible for all nodes.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST4.html#sitemapVal">View Sitemap validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="sitemap.html" target="_blank">Open Sitemap Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page — Coral Reef Restoration</h2>
+                <h3>Technical Description</h3>
+                <p>This content page covers coral reef restoration through four sections with internal anchor navigation, four descriptive images, and a fixed "Go to Top" button. Embedded CSS styles the navigation menu, images, and fixed button.</p>
+
+                <h3>Accessibility</h3>
+                <p>Logical heading hierarchy. All images have descriptive alt text. Internal navigation uses <code>aria-label</code>. "Go to Top" button has <code>aria-label</code>.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST4.html#contentVal">View Content Page validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="content_ST4.html" target="_blank">Open Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge">Challenges and Lessons Learned</h2>
+                <p>The progressive profile builder required careful state management. Initially, I used separate variables for each field, but switching to a single <code>profileData</code> object made the code cleaner and the <code>updateDisplay()</code> function more maintainable.</p>
+                <p>The SVG sitemap required planning the coordinate system carefully within the viewBox. I initially used trial-and-error for positioning nodes but found that sketching the layout on paper first, then translating to coordinates, was far more efficient.</p>
+                <p>Handling the "skip" and "revisit" functionality was the most complex part. Ensuring that revisiting a step properly updated the profile without duplicating output required careful DOM manipulation and state tracking.</p>
+            </section>
+
+            <section>
+                <h2 id="compliance">Compliance with JANET Regulations</h2>
+                <p>All pages are original and educational. The profile page uses client-side <code>prompt()</code> only — no data is stored or transmitted to any server. All images are royalty-free and referenced. Content is appropriate and non-discriminatory. The SVG sitemap does not contain any external dependencies.</p>
+            </section>
+
+            <section>
+                <h2 id="group">Group Meetings and Individual Contribution Log</h2>
+                <table>
+                    <thead>
+                        <tr><th colspan="6">Group Meetings and Contribution Log</th></tr>
+                        <tr><th>Meeting</th><th>Date &amp; Time</th><th>Format</th><th>Objective</th><th>Attended</th><th>Your Individual Contribution</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>3 Feb 2026</td><td>Face-to-face</td><td>Agree SDG and assign roles</td><td>Yes</td><td>Agreed to take on user profile and sitemap. Discussed progressive prompt concept.</td></tr>
+                        <tr><td>2</td><td>10 Feb 2026</td><td>Online (Teams)</td><td>Design review</td><td>Yes</td><td>Reviewed template CSS. Began planning SVG sitemap node layout.</td></tr>
+                        <tr><td>3</td><td>17 Feb 2026</td><td>Face-to-face</td><td>File naming and structure</td><td>Yes</td><td>Confirmed profile.html and sitemap.html. Ensured all page file names match nav links.</td></tr>
+                        <tr><td>4</td><td>3 Mar 2026</td><td>Online (Teams)</td><td>Progress review</td><td>Yes</td><td>Demonstrated profile prompts with progressive display. Showed SVG sitemap draft.</td></tr>
+                        <tr><td>5</td><td>10 Mar 2026</td><td>Face-to-face</td><td>Content and accessibility</td><td>Yes</td><td>Added title elements to all SVG links. Tested keyboard navigation through sitemap.</td></tr>
+                        <tr><td>6</td><td>17 Mar 2026</td><td>Online (Teams)</td><td>Final testing</td><td>Yes</td><td>Validated all pages. Fixed SVG viewBox scaling. Captured validation screenshots.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <ul class="ref">
+                    <li>Duckett, J., 2011. <i>HTML and CSS: Design and Build Websites.</i> John Wiley &amp; Sons.</li>
+                    <li>MDN Web Docs (2026) <i>SVG Tutorial.</i> Available at: <a href="#">https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial</a> (Accessed: 20 Feb 2026).</li>
+                    <li>MDN Web Docs (2026) <i>Window.prompt().</i> Available at: <a href="#">https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt</a> (Accessed: 18 Feb 2026).</li>
+                    <li>iStock (2026) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Accessed: 12 Feb 2026).</li>
+                </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                <li><strong>Liyanaarachchi (20240077)</strong></li>
+                <ul>
+                    <li><a href="#profile">User Profile</a></li>
+                    <li><a href="#sitemap">Sitemap (SVG)</a></li>
+                    <li><a href="#content">Content Page</a></li>
+                </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer><p>&copy; 2026 SDG Action Hub — Liyanaarachchi Page Editor</p></footer>
+</body>
+</html>

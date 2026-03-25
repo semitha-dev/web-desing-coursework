@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor — PVS Kithnuka</title>
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+</head>
+<body>
+
+    <header id="top">
+        <h1>SDG Action Hub — Page Editor</h1>
+    </header>
+
+    <section class="stud">
+        <h2>PVS Kithnuka (20241421) | Team SDG14 | Template, Home Page &amp; Gallery</h2>
+    </section>
+
+    <div class="container">
+        <main>
+
+            <!-- HOME PAGE -->
+            <section>
+                <h2 id="home">Home Page</h2>
+                <h3>Technical Description</h3>
+                <p>The Home Page uses the shared HTML template with the standard <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> structure. The main content area contains two primary sections: mission cards and an interactive content gallery.</p>
+                <p><strong>HTML Structure:</strong> Three <code>&lt;div class="card"&gt;</code> elements display mission-related content, each containing an <code>&lt;img&gt;</code> with alt text, an <code>&lt;h3&gt;</code> heading, a descriptive <code>&lt;p&gt;</code>, and a <code>&lt;ul&gt;</code> with action highlights. The gallery section uses <code>&lt;a&gt;</code> elements styled as tiles that link to each student's content page.</p>
+                <p><strong>CSS Techniques:</strong> Page-specific embedded CSS uses <code>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))</code> for responsive card layouts. Gallery tiles use <code>position: relative</code> with overlaid captions using <code>position: absolute; bottom: 0</code> and a gradient background for text readability. Hover effects use <code>transform: translateY(-6px) scale(1.02)</code> with transitions for smooth animation.</p>
+
+                <h3>Accessibility</h3>
+                <p>All images include descriptive alt text. The navigation bar uses an <code>aria-label="Main navigation"</code> attribute. The active page is indicated visually via the <code>.active</code> CSS class. Semantic HTML elements (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>) are used throughout for screen reader compatibility.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST1.html#homeVal">View Home Page validation report</a></p>
+
+                <h3>Link to the page</h3>
+                <p><a href="home.html" target="_blank">Open Home Page</a></p>
+            </section>
+
+            <!-- GALLERY PAGE -->
+            <section>
+                <h2 id="gallery">Gallery Page</h2>
+                <h3>Technical Description</h3>
+                <p>The Gallery Page displays a grid of thumbnail images related to ocean conservation. The layout uses <code>display: grid</code> with <code>auto-fit</code> columns for responsiveness.</p>
+                <p><strong>HTML Structure:</strong> Each gallery item is a <code>&lt;div class="gallery-item"&gt;</code> containing an <code>&lt;img&gt;</code>, a label, and <code>data-*</code> attributes storing the title, image source, and description for the modal view.</p>
+                <p><strong>JavaScript Interactivity:</strong> Event listeners handle hover (mouseenter/mouseleave), click-to-expand (opening a modal), and close interactions (close button, click outside, Escape key). The modal is populated dynamically using <code>getAttribute()</code> and DOM manipulation. User customisation controls allow changing the colour scheme and font style of the extended view using <code>select</code> elements and JavaScript <code>switch</code> statements that modify <code>style</code> properties.</p>
+                <p><strong>CSS Techniques:</strong> The modal uses <code>position: fixed</code> with flexbox centring. Gallery items have <code>overflow: hidden</code> with image <code>transform: scale(1.08)</code> on hover. An external CSS file (<code>css/gallery.css</code>) handles all page-specific styling.</p>
+
+                <h3>Accessibility</h3>
+                <p>All images have descriptive alt text. Gallery items include <code>tabindex="0"</code> for keyboard navigation. The modal has <code>role="dialog"</code> and <code>aria-label</code>. The close button includes <code>aria-label="Close image view"</code>. Keyboard support allows Enter to open items and Escape to close the modal.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST1.html#galleryVal">View Gallery Page validation report</a></p>
+
+                <h3>Link to the page</h3>
+                <p><a href="gallery.html" target="_blank">Open Gallery Page</a></p>
+            </section>
+
+            <!-- CONTENT PAGE -->
+            <section>
+                <h2 id="content">Content Page — Ocean Pollution</h2>
+                <h3>Technical Description</h3>
+                <p>The content page covers ocean pollution with four structured sections using proper heading hierarchy (<code>&lt;h1&gt;</code> for page title, <code>&lt;h2&gt;</code> for sections). An internal navigation menu at the top provides anchor links (<code>href="#section-id"</code>) to each section.</p>
+                <p><strong>CSS Techniques:</strong> Embedded CSS styles the internal navigation with flexbox, content images with <code>border-radius</code> and <code>box-shadow</code>, and a fixed "Go to Top" button using <code>position: fixed; bottom: 30px; right: 30px</code>.</p>
+
+                <h3>Accessibility</h3>
+                <p>Four relevant images each have descriptive alt text. The internal navigation uses <code>aria-label="Page sections"</code>. Heading hierarchy is logical and sequential. The "Go to Top" link includes an <code>aria-label</code> attribute.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST1.html#contentVal">View Content Page validation report</a></p>
+
+                <h3>Link to the page</h3>
+                <p><a href="content_ST1.html" target="_blank">Open Content Page</a></p>
+            </section>
+
+            <!-- TEMPLATE & GLOBAL CSS -->
+            <section>
+                <h2 id="template">Shared Template &amp; Global CSS</h2>
+                <h3>Technical Description</h3>
+                <p>The shared HTML template provides a consistent structure for all pages with a <code>&lt;header&gt;</code> containing the brand logo and navigation bar, a <code>&lt;main&gt;</code> content area, and a <code>&lt;footer&gt;</code> with links and student details. Comments within the HTML and CSS clearly indicate which sections must not be modified.</p>
+                <p><strong>Global CSS:</strong> The external stylesheet (<code>style.css</code>) defines CSS custom properties (variables) for the colour palette, typography, spacing, and transitions. It includes shared styles for the header, navigation bar (with hover and active states), cards, buttons, forms, images, footer, and responsive breakpoints. Page-specific styles are embedded in each HTML file using <code>&lt;style&gt;</code> blocks. Google Fonts imports Open Sans for consistent typography.</p>
+                <p>The navigation bar uses flexbox with <code>flex-wrap: wrap</code> for responsiveness. The active page is indicated by the <code>.nav-link.active</code> class with a green background. All team members were instructed to only change the <code>active</code> class and their footer details.</p>
+            </section>
+
+            <!-- CHALLENGES -->
+            <section>
+                <h2 id="challenge">Challenges and Lessons Learned</h2>
+                <p>One significant challenge was ensuring the gallery modal worked correctly across different screen sizes. The initial implementation used fixed pixel values, which caused layout issues on mobile. Switching to <code>max-width: 700px; width: 100%</code> with viewport-relative padding resolved this.</p>
+                <p>Another challenge was coordinating the template with other team members. Clear comments in the HTML and CSS, along with a shared style guide document, helped everyone integrate their content without breaking the shared structure.</p>
+                <p>A key lesson learned was the importance of testing navigation links early. Several broken links were caught during group testing sessions, which reinforced the value of agreed file naming conventions.</p>
+            </section>
+
+            <!-- COMPLIANCE -->
+            <section>
+                <h2 id="compliance">Compliance with JANET Regulations</h2>
+                <p>All pages comply with JANET regulations governing web page publication. Content is original and appropriate for an educational context. No offensive, discriminatory, or misleading material is included. All externally sourced images are royalty-free and properly referenced. The website does not collect or store personal data — the feedback form is client-side only and does not transmit information to any server.</p>
+                <p>The website follows responsible web publishing practices by using semantic HTML, providing alternative text for images, and ensuring content is accessible to users with disabilities.</p>
+            </section>
+
+            <!-- GROUP MEETINGS LOG -->
+            <section>
+                <h2 id="group">Group Meetings and Individual Contribution Log</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="6">Group Meetings and Contribution Log</th>
+                        </tr>
+                        <tr>
+                            <th>Meeting</th>
+                            <th>Date &amp; Time</th>
+                            <th>Format</th>
+                            <th>Objective</th>
+                            <th>Attended</th>
+                            <th>Your Individual Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>3 Feb 2026</td><td>Face-to-face</td><td>Agree SDG and assign roles</td><td>Yes</td><td>Proposed SDG 14 (Life Below Water). Agreed to take responsibility for template, home page, and gallery.</td></tr>
+                        <tr><td>2</td><td>10 Feb 2026</td><td>Online (Teams)</td><td>Design shared template and colour palette</td><td>Yes</td><td>Created initial template HTML and global CSS with green colour scheme. Shared with team for feedback.</td></tr>
+                        <tr><td>3</td><td>17 Feb 2026</td><td>Face-to-face</td><td>Review template, finalise file names</td><td>Yes</td><td>Updated navigation links to use agreed file names. Added clear HTML/CSS comments for team guidance.</td></tr>
+                        <tr><td>4</td><td>3 Mar 2026</td><td>Online (Teams)</td><td>Progress review and integration testing</td><td>Yes</td><td>Tested all navigation links across pages. Fixed broken link to AIS page (was volunteer.html, changed to ais.html).</td></tr>
+                        <tr><td>5</td><td>10 Mar 2026</td><td>Face-to-face</td><td>Content review and accessibility check</td><td>Yes</td><td>Added alt text to all images on home and gallery pages. Verified keyboard navigation in gallery modal.</td></tr>
+                        <tr><td>6</td><td>17 Mar 2026</td><td>Online (Teams)</td><td>Final testing and validation</td><td>Yes</td><td>Validated all my pages through W3C validator. Fixed one minor error (duplicate id). Prepared validation screenshots.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- REFERENCES -->
+            <section>
+                <h2 id="ref">References</h2>
+                <ul class="ref">
+                    <li>Duckett, J., 2011. <i>HTML and CSS: Design and Build Websites.</i> John Wiley &amp; Sons.</li>
+                    <li>W3Schools (2026) <i>CSS Grid Layout.</i> Available at: <a href="#">https://www.w3schools.com/css/css_grid.asp</a> (Accessed: 15 Mar 2026).</li>
+                    <li>MDN Web Docs (2026) <i>Using CSS Custom Properties.</i> Available at: <a href="#">https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties</a> (Accessed: 10 Mar 2026).</li>
+                    <li>iStock (2026) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Accessed: 12 Feb 2026).</li>
+                    <li>United Nations (2026) <i>SDG 14: Life Below Water.</i> Available at: <a href="#">https://sdgs.un.org/goals/goal14</a> (Accessed: 3 Feb 2026).</li>
+                </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                <li><strong>PVS Kithnuka (20241421)</strong></li>
+                <ul>
+                    <li><a href="#template">Shared Template &amp; CSS</a></li>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#content">Content Page</a></li>
+                </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SDG Action Hub — PVS Kithnuka Page Editor</p>
+    </footer>
+</body>
+</html>

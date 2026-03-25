@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG Action Hub | Life Below Water</title>
+
+    <!-- Auto-redirect to home page after 4 seconds -->
+    <meta http-equiv="refresh" content="4;url=home.html">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EMBEDDED CSS — Splash Screen (Student 2) -->
+    <style>
+        /* Full-screen splash layout */
+        .splash-wrapper {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+
+        /* Full-screen background image */
+        .splash-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/splash-bg.jpg') center/cover no-repeat;
+            z-index: 0;
+        }
+
+        /* Dark overlay for text readability */
+        .splash-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 42, 83, 0.82), rgba(5, 171, 109, 0.72));
+            z-index: 1;
+        }
+
+        /* Content sits above the overlay */
+        .splash-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 30px;
+        }
+
+        .splash-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            color: #fff;
+        }
+
+        .splash-content .mission {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            opacity: 0.92;
+        }
+
+        .splash-content .team-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .splash-content .team-list li {
+            background: rgba(255,255,255,0.18);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Countdown display */
+        .countdown {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+
+        /* CSS Loader animation */
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.25);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px auto;
+        }
+
+        @keyframes spin {
+            0%   { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Skip button */
+        .skip-btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .skip-btn:hover {
+            background: #fff;
+            color: #002a53;
+        }
+
+        @media (max-width: 600px) {
+            .splash-content h1 {
+                font-size: 2rem;
+            }
+            .splash-content .mission {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================================================
+         SPLASH SCREEN — Student 2
+         First point of interaction. Introduces site purpose,
+         team members, and transitions to Home Page.
+    ==================================================== -->
+    <div class="splash-wrapper">
+
+        <!-- Background image layer -->
+        <div class="splash-bg"></div>
+
+        <!-- Dark overlay for readability -->
+        <div class="splash-overlay"></div>
+
+        <!-- Main splash content -->
+        <div class="splash-content">
+
+            <!-- Website title -->
+            <h1>SDG Action Hub</h1>
+
+            <!-- Brief mission statement -->
+            <p class="mission">
+                Empowering students and communities to protect life below water through
+                awareness, action, and sustainable choices for our oceans.
+            </p>
+
+            <!-- Group members list -->
+            <ul class="team-list">
+                <li>PVS Kithnuka (20241421)</li>
+                <li>Sasthindu (20241422)</li>
+                <li>Esandu (20241244)</li>
+                <li>Liyanaarachchi (20240077)</li>
+            </ul>
+
+            <!-- CSS loader animation -->
+            <div class="loader" aria-hidden="true"></div>
+
+            <!-- JavaScript countdown timer -->
+            <p class="countdown" id="countdown">Entering site in 4...</p>
+
+            <!-- Skip Intro button -->
+            <a href="home.html" class="skip-btn" id="skipBtn">Skip Intro</a>
+        </div>
+    </div>
+
+    <!-- External JavaScript — Countdown timer & skip functionality -->
+    <script src="js/splash.js"></script>
+
+</body>
+</html>

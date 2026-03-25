@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG Action Hub | Marine Protected Areas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EMBEDDED CSS — Content Page (Student 2) -->
+    <style>
+        .content-nav {
+            background: var(--white);
+            padding: 16px 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+        .content-nav h3 { margin-bottom: 8px; }
+        .content-nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .content-nav a {
+            text-decoration: none;
+            padding: 6px 14px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .content-nav a:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+        .content-article { margin-bottom: 30px; }
+        .content-article h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        .content-article img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 16px 0;
+            max-width: 100%;
+        }
+        .go-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+            z-index: 100;
+        }
+        .go-top:hover {
+            background: var(--secondary-color);
+            color: #fff;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- SHARED HEADER -->
+    <header class="site-header">
+        <div class="container header-top">
+            <div class="brand">
+                <img src="images/logo.png" alt="SDG Action Hub logo — a globe with colourful SDG segments" class="logo">
+                <div class="brand-text"><h1>SDG Action Hub</h1><p>Small Actions, Big Impact</p></div>
+            </div>
+        </div>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="ais.html" class="nav-link">Action Impact Simulator</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="profile.html" class="nav-link">User Profile</a></li>
+                    <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="sitemap.html" class="nav-link">Sitemap</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h1>Marine Protected Areas: Safeguarding Our Seas</h1>
+
+        <nav class="content-nav" aria-label="Page sections">
+            <h3>On This Page</h3>
+            <ul>
+                <li><a href="#what-are-mpas">What Are MPAs?</a></li>
+                <li><a href="#benefits">Benefits of MPAs</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#student-action">Student Action</a></li>
+            </ul>
+        </nav>
+
+        <section class="content-article" id="what-are-mpas">
+            <h2>What Are Marine Protected Areas?</h2>
+            <img src="images/content/marine-protected.jpg" alt="Aerial view of a turquoise marine protected area surrounded by coral reefs">
+            <p>Marine Protected Areas (MPAs) are designated regions of the ocean where human activities are regulated to conserve marine ecosystems, biodiversity, and cultural resources. They range from highly protected no-take zones where all extraction is prohibited, to multi-use areas that allow some sustainable activities like regulated fishing.</p>
+            <p>Currently, approximately 8% of the global ocean is covered by some form of MPA designation. The international target agreed under the Kunming-Montreal Global Biodiversity Framework is to protect at least 30% of the ocean by 2030 — a goal known as "30 by 30". Achieving this target requires significant expansion of protected areas, particularly in the high seas beyond national jurisdiction.</p>
+        </section>
+
+        <section class="content-article" id="benefits">
+            <h2>Benefits of Marine Protected Areas</h2>
+            <img src="images/content/mpa-biodiversity.jpg" alt="Diverse school of tropical fish thriving inside a marine protected area">
+            <p>Research consistently demonstrates that well-managed MPAs deliver significant ecological and economic benefits. Within protected boundaries, fish populations typically increase in size, abundance, and diversity. This "spillover effect" benefits neighbouring fishing grounds as fish move beyond MPA boundaries.</p>
+            <p>Healthy marine ecosystems within MPAs also provide essential services to humans, including coastal protection from storms and erosion, carbon sequestration by seagrass meadows and mangroves, and support for sustainable tourism and recreation industries that create local employment.</p>
+            <p>A study published in the journal Nature found that fully protected marine areas have, on average, 670% more fish biomass than unprotected areas. This dramatic difference underscores the importance of strong protection levels within MPA networks.</p>
+        </section>
+
+        <section class="content-article" id="challenges">
+            <h2>Challenges Facing MPAs</h2>
+            <img src="images/content/mpa-enforcement.jpg" alt="Patrol boat monitoring a marine protected area boundary">
+            <p>While MPAs are a powerful conservation tool, they face several significant challenges. Many protected areas exist only "on paper" — legally designated but lacking the funding, personnel, or infrastructure needed for effective enforcement and monitoring.</p>
+            <p>Political and economic pressures from fishing industries, energy companies, and coastal development interests often weaken MPA protections. Climate change adds another layer of complexity, as warming waters and ocean acidification affect ecosystems regardless of their protection status.</p>
+            <p>Effective MPAs require ongoing monitoring, community engagement, adequate funding, and adaptive management that responds to changing environmental conditions. International cooperation is particularly critical for protecting marine ecosystems in the high seas.</p>
+        </section>
+
+        <section class="content-article" id="student-action">
+            <h2>How Students Can Support MPAs</h2>
+            <img src="images/content/student-ocean-action.jpg" alt="University students participating in a marine conservation awareness campaign on campus">
+            <p>Students can play a vital role in supporting marine protection efforts through education, advocacy, and direct action:</p>
+            <ul>
+                <li><strong>Learn and share:</strong> Study marine conservation issues and share knowledge through campus events, social media, and conversations.</li>
+                <li><strong>Support MPA campaigns:</strong> Sign petitions and engage with organisations like the Marine Conservation Society that advocate for stronger ocean protections.</li>
+                <li><strong>Volunteer for citizen science:</strong> Participate in marine biodiversity monitoring programmes that provide data for MPA management.</li>
+                <li><strong>Make sustainable choices:</strong> Choose sustainably sourced seafood and reduce your environmental footprint to ease pressure on marine ecosystems.</li>
+                <li><strong>Engage with policy:</strong> Write to elected representatives supporting marine protection legislation and the 30 by 30 target.</li>
+            </ul>
+        </section>
+
+        <a href="#top" class="go-top" aria-label="Go to top of page">&#8679;</a>
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div><h3>About This Site</h3><p>SDG Action Hub is a student project designed to promote action-based awareness and participation in sustainability goals.</p></div>
+            <div><h3>Useful Links</h3><ul class="footer-links"><li><a href="pageEditor_ST2.html">Page Editor</a></li><li><a href="validation_ST2.html">Validation</a></li><li><a href="#">Accessibility &amp; Compliance</a></li></ul></div>
+            <div><h3>Student Details</h3><p>Name: Sasthindu (20241422)</p><p>Role: Splash Screen &amp; Action Impact Simulator</p><p>Email: sasthindu@email.com</p></div>
+        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 SDG Action Hub. Student coursework project.</p></div>
+    </footer>
+</body>
+</html>

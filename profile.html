@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG Action Hub | User Profile</title>
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EMBEDDED CSS — User Profile (Student 4) -->
+    <style>
+        /* Profile controls area */
+        .profile-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        /* Step buttons */
+        .step-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .step-btn.completed {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+        }
+
+        .step-btn.skipped {
+            background: #fff8e1;
+            color: #f57f17;
+            border: 1px solid #ffe082;
+        }
+
+        /* Progress bar container */
+        .progress-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .progress-bar-outer {
+            width: 100%;
+            height: 24px;
+            background: #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-bar-inner {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), #2ecc71);
+            border-radius: 12px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+
+        .progress-text {
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        .progress-detail {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+
+        /* Status message */
+        .status-msg {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+            margin-top: 8px;
+            padding: 8px 14px;
+            background: #f0f7f4;
+            border-radius: 8px;
+        }
+
+        /* Profile output display */
+        .profile-output {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+        }
+
+        .profile-output h3 {
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        /* Individual step section in output */
+        .profile-step-section {
+            display: none;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: #f9fdfb;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .profile-step-section.visible {
+            display: block;
+        }
+
+        .profile-step-section h4 {
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .profile-table td {
+            padding: 6px 12px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.92rem;
+        }
+
+        .profile-table td:first-child {
+            font-weight: 600;
+            color: var(--dark-text);
+            width: 40%;
+        }
+
+        .profile-table td:last-child {
+            color: var(--muted-text);
+        }
+
+        /* Confirmation section */
+        .confirmation-section {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #e8f5e9;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .confirmation-section.visible {
+            display: block;
+        }
+
+        .confirmation-section h4 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================================================
+         SHARED HEADER — START
+    ==================================================== -->
+    <header class="site-header">
+        <div class="container header-top">
+            <div class="brand">
+                <img src="images/logo.png" alt="SDG Action Hub logo — a globe with colourful SDG segments" class="logo">
+                <div class="brand-text">
+                    <h1>SDG Action Hub</h1>
+                    <p>Small Actions, Big Impact</p>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="ais.html" class="nav-link">Action Impact Simulator</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <!-- Profile is the active page -->
+                    <li><a href="profile.html" class="nav-link active">User Profile</a></li>
+                    <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="sitemap.html" class="nav-link">Sitemap</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ===================================================
+         SHARED HEADER — END
+    ==================================================== -->
+
+    <!-- ===================================================
+         PAGE CONTENT — USER PROFILE (Student 4)
+    ==================================================== -->
+    <main class="container main-content">
+
+        <section class="hero-section">
+            <div class="hero-card">
+                <h2>Progressive User Profile</h2>
+                <p>
+                    This page builds a user profile gradually using JavaScript prompts (no
+                    HTML forms). You can complete steps in order, skip questions, and revisit
+                    steps later to match your profile.
+                </p>
+            </div>
+        </section>
+
+        <!-- Controls -->
+        <section>
+            <div class="profile-controls">
+                <button class="btn" id="startBtn">Start / Continue Profile</button>
+                <button class="btn" id="resetBtn" style="background:#e53935;">Reset Profile</button>
+            </div>
+
+            <!-- Step buttons for revisiting -->
+            <div class="profile-controls" id="stepButtons">
+                <span style="font-weight:600;">Steps:</span>
+                <button class="step-btn" id="step1Btn">Step 1: Basics</button>
+                <button class="step-btn" id="step2Btn">Step 2: Interests</button>
+                <button class="step-btn" id="step3Btn">Step 3: Actions</button>
+            </div>
+        </section>
+
+        <!-- Progress indicator -->
+        <section class="progress-container">
+            <p class="progress-text">Completion: <span id="progressPercent">0%</span>
+                <span class="progress-detail" id="progressDetail">(0/9 prompts completed)</span>
+            </p>
+            <div class="progress-bar-outer">
+                <div class="progress-bar-inner" id="progressBar"></div>
+            </div>
+            <p class="status-msg" id="statusMsg">Click "Start / Continue Profile" to begin.</p>
+        </section>
+
+        <!-- Revisit buttons -->
+        <section>
+            <div class="profile-controls">
+                <button class="btn" id="revisit1">Revisit Step 1</button>
+                <button class="btn" id="revisit2">Revisit Step 2</button>
+                <button class="btn" id="revisit3">Revisit Step 3</button>
+            </div>
+        </section>
+
+        <!-- Profile output display -->
+        <section class="profile-output">
+            <h3>Your Profile (Updates Progressively)</h3>
+
+            <!-- Step 1 output -->
+            <div class="profile-step-section" id="step1Output">
+                <h4>Step 1: Basics</h4>
+                <table class="profile-table">
+                    <tr><td>Name:</td><td id="outName">—</td></tr>
+                    <tr><td>Username:</td><td id="outUsername">—</td></tr>
+                    <tr><td>Local area:</td><td id="outArea">—</td></tr>
+                </table>
+            </div>
+
+            <!-- Step 2 output -->
+            <div class="profile-step-section" id="step2Output">
+                <h4>Step 2: Interests</h4>
+                <table class="profile-table">
+                    <tr><td>SDG interest:</td><td id="outInterest">—</td></tr>
+                    <tr><td>Preferred content:</td><td id="outContent">—</td></tr>
+                    <tr><td>Weekly time:</td><td id="outTime">—</td></tr>
+                </table>
+            </div>
+
+            <!-- Step 3 output -->
+            <div class="profile-step-section" id="step3Output">
+                <h4>Step 3: Actions</h4>
+                <table class="profile-table">
+                    <tr><td>Action taken:</td><td id="outAction">—</td></tr>
+                    <tr><td>Goal this month:</td><td id="outGoal">—</td></tr>
+                    <tr><td>Commitment level:</td><td id="outCommit">—</td></tr>
+                </table>
+            </div>
+
+            <!-- Confirmation -->
+            <div class="confirmation-section" id="confirmSection">
+                <h4>Profile Complete!</h4>
+                <p>When you complete all steps, you will see a confirmation message here.</p>
+            </div>
+        </section>
+
+    </main>
+    <!-- ===================================================
+         PAGE CONTENT — END
+    ==================================================== -->
+
+    <!-- ===================================================
+         SHARED FOOTER — START
+    ==================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>About This Site</h3>
+                <p>SDG Action Hub is a student project designed to promote action-based awareness and participation in sustainability goals.</p>
+            </div>
+            <div>
+                <h3>Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="pageEditor_ST4.html">Page Editor</a></li>
+                    <li><a href="validation_ST4.html">Validation</a></li>
+                    <li><a href="#">Accessibility &amp; Compliance</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Student Details</h3>
+                <p>Name: Liyanaarachchi (20240077)</p>
+                <p>Role: User Profile &amp; Sitemap</p>
+                <p>Email: liyanaarachchi@email.com</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 SDG Action Hub. Student coursework project.</p>
+        </div>
+    </footer>
+    <!-- ===================================================
+         SHARED FOOTER — END
+    ==================================================== -->
+
+    <!-- External JavaScript — Progressive profile building -->
+    <script src="js/profile.js"></script>
+
+</body>
+</html>

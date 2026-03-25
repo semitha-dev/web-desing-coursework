@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(ls \"e:/Personal/web/\"*.pdf)",
+      "Bash(ls \"e:/Personal/\"*.pdf)",
+      "Bash(ls \"e:/Personal/web/coursework\"*)",
+      "Bash(ls \"e:/Personal/web/\"*spec* \"e:/Personal/web/\"*Spec* \"e:/Personal/web/\"*SPEC*)",
+      "Bash(ls \"e:/Personal/web/\"*course* \"e:/Personal/web/\"*Course*)",
+      "Bash(ls \"e:/Personal/web/\"*brief* \"e:/Personal/web/\"*Brief*)",
+      "Bash(ls \"e:/Personal/web/\"*assignment* \"e:/Personal/web/\"*Assignment*)",
+      "Bash(ls \"e:/Personal/web/template\"*)",
+      "Bash(for f:*)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "Bash(grep -rn 'src=\"\"\\\\.\\\\./js/\\\\|src=\"\"js/' \"e:/Personal/web/\"*.html)",
+      "Bash(grep -rn 'href=\"\"\\\\.\\\\./css/pageEditor' \"e:/Personal/web/\"*.html)",
+      "Bash(grep -rn 'pageEditor_validator' \"e:/Personal/web/\"*.html)",
+      "Bash(grep -rn 'href=\"\"style.css\"\"' \"e:/Personal/web/\"*.html)",
+      "Bash(grep -rn \"Student 1\\\\|Student 2\\\\|Student 3\\\\|Student 4\\\\|student1@\\\\|student2@\\\\|student3@\\\\|student4@\" \"e:/Personal/web/\"*.html)",
+      "Bash(grep -rn \"Student ID\\\\|student_id\\\\|studentId\" \"e:/Personal/web/\"*.html)",
+      "Bash(grep -rn \"Student [1-4]\" \"e:/Personal/web/\"*.html)",
+      "Bash(*)"
+    ]
+  }
+}

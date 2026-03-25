@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor — Esandu</title>
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+</head>
+<body>
+    <header id="top"><h1>SDG Action Hub — Page Editor</h1></header>
+    <section class="stud"><h2>Esandu (20241244) | Team SDG14 | Feedback &amp; Team Page</h2></section>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2 id="feedback">Feedback &amp; Programme Directory</h2>
+                <h3>Technical Description</h3>
+                <p>The Feedback page combines three distinct sections: a scrollable programme directory, a ratings/reviews summary, and a JavaScript-enhanced feedback form.</p>
+                <p><strong>HTML Structure:</strong> The scrollable section uses a wrapper with CSS <code>max-height: 520px; overflow-y: auto</code> containing 4 programme cards in a CSS Grid. Each card has an image, title, description, and call-to-action button. A styled dropdown allows sorting (non-functional as per spec). The reviews section displays an overall rating and 3 review cards with headings, descriptions, reviewer names, dates, and ratings.</p>
+                <p><strong>Form Structure:</strong> Two <code>&lt;fieldset&gt;</code> groups with <code>&lt;legend&gt;</code> elements organise the form into "Personal Details" and "Feedback Details". Fields include text input, email, tel, textarea (with <code>maxlength="500"</code>), select dropdown, date, and datetime-local inputs as required by the specification.</p>
+                <p><strong>JavaScript Interactivity:</strong> A live character counter updates on each <code>input</code> event on the message textarea. Form validation uses <code>addEventListener('submit')</code> with <code>preventDefault()</code>, checking each field and displaying field-specific error messages via <code>classList.add('show')</code>. Email validation uses a regex pattern. On successful validation, a confirmation message is shown and the form resets.</p>
+                <p><strong>CSS:</strong> An external page-specific CSS file (<code>css/feedback.css</code>) styles the scrollable section, programme cards, review cards, form fields, error messages, and success confirmation. Custom scrollbar styling is applied for webkit browsers.</p>
+
+                <h3>Accessibility</h3>
+                <p>All form fields have associated <code>&lt;label&gt;</code> elements. Error messages appear near the relevant field. Images include alt text. Fieldset/legend grouping improves form comprehension for screen readers.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST3.html#feedbackVal">View Feedback Page validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="feedback.html" target="_blank">Open Feedback Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="team">Team Page</h2>
+                <h3>Technical Description</h3>
+                <p>The Team Page presents four team member blocks in a responsive grid layout using CSS Grid with <code>auto-fit</code> columns.</p>
+                <p><strong>HTML Structure:</strong> Each member block is a <code>&lt;div class="team-member"&gt;</code> with <code>tabindex="0"</code> containing a thumbnail image, visible info (name and role), and a hidden details panel.</p>
+                <p><strong>CSS Interactivity:</strong> The expandable details panel uses <code>max-height: 0; overflow: hidden</code> by default with a CSS transition. On <code>:hover</code> and <code>:focus-within</code>, the <code>max-height</code> changes to <code>250px</code>, revealing the details with a smooth animation. Thumbnail images scale to <code>1.05</code> and reduce opacity on hover. The card itself translates upward and gains an enhanced shadow.</p>
+
+                <h3>Accessibility</h3>
+                <p>Each team member block includes <code>tabindex="0"</code> for keyboard access. The <code>:focus-within</code> selector ensures details expand on keyboard focus. All images have meaningful alt text. A visible focus state is present via the global CSS outline styles.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST3.html#teamVal">View Team Page validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="team.html" target="_blank">Open Team Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page — The Overfishing Crisis</h2>
+                <h3>Technical Description</h3>
+                <p>This content page explores overfishing through four structured sections with an internal navigation menu, four images, and a fixed "Go to Top" button. Embedded CSS handles page-specific styling including the content navigation, image presentation, and fixed-position button.</p>
+
+                <h3>Accessibility</h3>
+                <p>Logical heading hierarchy from <code>&lt;h1&gt;</code> to <code>&lt;h2&gt;</code>. All images include descriptive alt text. Internal navigation uses <code>aria-label</code>. Semantic elements used throughout.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST3.html#contentVal">View Content Page validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="content_ST3.html" target="_blank">Open Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge">Challenges and Lessons Learned</h2>
+                <p>The live character counter was straightforward to implement but required careful handling of the <code>maxlength</code> attribute interaction. I learned that HTML's <code>maxlength</code> prevents additional input while JavaScript provides the visual feedback.</p>
+                <p>The team page hover expansion was initially jumpy due to fixed <code>height</code> values. Switching to <code>max-height</code> with transitions produced a much smoother result. This taught me the importance of choosing the right CSS property for animations.</p>
+            </section>
+
+            <section>
+                <h2 id="compliance">Compliance with JANET Regulations</h2>
+                <p>All content is original and educational. The feedback form does not transmit data to any server. No personal information is stored. All images are royalty-free and referenced. Content is appropriate and non-discriminatory.</p>
+            </section>
+
+            <section>
+                <h2 id="group">Group Meetings and Individual Contribution Log</h2>
+                <table>
+                    <thead>
+                        <tr><th colspan="6">Group Meetings and Contribution Log</th></tr>
+                        <tr><th>Meeting</th><th>Date &amp; Time</th><th>Format</th><th>Objective</th><th>Attended</th><th>Your Individual Contribution</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>3 Feb 2026</td><td>Face-to-face</td><td>Agree SDG and assign roles</td><td>Yes</td><td>Agreed to take on feedback and team pages. Discussed programme directory concept.</td></tr>
+                        <tr><td>2</td><td>10 Feb 2026</td><td>Online (Teams)</td><td>Design review</td><td>Yes</td><td>Reviewed template CSS. Suggested card-based layout for programme listings.</td></tr>
+                        <tr><td>3</td><td>17 Feb 2026</td><td>Face-to-face</td><td>File naming and structure</td><td>Yes</td><td>Confirmed feedback.html and team.html file names. Began form wireframe.</td></tr>
+                        <tr><td>4</td><td>3 Mar 2026</td><td>Online (Teams)</td><td>Progress review</td><td>Yes</td><td>Demonstrated feedback form with live character counter. Got suggestions for review section layout.</td></tr>
+                        <tr><td>5</td><td>10 Mar 2026</td><td>Face-to-face</td><td>Content and accessibility</td><td>Yes</td><td>Added tabindex to team member blocks. Ensured all form labels are properly linked.</td></tr>
+                        <tr><td>6</td><td>17 Mar 2026</td><td>Online (Teams)</td><td>Final testing</td><td>Yes</td><td>Validated all pages. Fixed fieldset styling issue. Captured validation screenshots.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <ul class="ref">
+                    <li>Duckett, J., 2011. <i>HTML and CSS: Design and Build Websites.</i> John Wiley &amp; Sons.</li>
+                    <li>MDN Web Docs (2026) <i>Client-side form validation.</i> Available at: <a href="#">https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation</a> (Accessed: 5 Mar 2026).</li>
+                    <li>iStock (2026) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Accessed: 12 Feb 2026).</li>
+                </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                <li><strong>Esandu (20241244)</strong></li>
+                <ul>
+                    <li><a href="#feedback">Feedback Page</a></li>
+                    <li><a href="#team">Team Page</a></li>
+                    <li><a href="#content">Content Page</a></li>
+                </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer><p>&copy; 2026 SDG Action Hub — Esandu Page Editor</p></footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Page — Liyanaarachchi</title>
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+</head>
+<body>
+    <header id="top"><h1>SDG Action Hub — Validation Report</h1></header>
+    <section class="stud"><h2>Liyanaarachchi (20240077) | Team SDG14 | User Profile &amp; Sitemap</h2></section>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2 id="profileVal">User Profile Page Validation Report</h2>
+                <p>The User Profile page was validated with no errors. All JavaScript is correctly placed within a script element at the end of the body. The progress bar and profile output sections use valid HTML5 structure with div and table elements.</p>
+                <img src="validationSnapshots/val_profile.png" alt="W3C validation results for profile.html showing no errors">
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST4.html#profile">View Profile Page technical description in Page Editor</a></p>
+            </section>
+
+            <section>
+                <h2 id="sitemapVal">Sitemap Page Validation Report</h2>
+                <p>The Sitemap page with inline SVG passed validation with no errors. All SVG elements including rect, text, line, and anchor elements are valid. The viewBox attribute and responsive width settings comply with SVG and HTML5 specifications.</p>
+                <img src="validationSnapshots/val_sitemap.png" alt="W3C validation results for sitemap.html showing no errors">
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST4.html#sitemap">View Sitemap Page technical description in Page Editor</a></p>
+            </section>
+
+            <section>
+                <h2 id="contentVal">Content Page Validation Report</h2>
+                <p>The Content Page (Coral Reef Restoration) validated with no errors. All sections have proper heading hierarchy, images include alt text, and internal anchor links reference valid id attributes.</p>
+                <img src="validationSnapshots/val_content_ST4.png" alt="W3C validation results for content_ST4.html showing no errors">
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST4.html#content">View Content Page technical description in Page Editor</a></p>
+            </section>
+
+            <section>
+                <h2 id="reflection">Reflection on Validation</h2>
+                <p>The SVG sitemap initially produced a validation warning about missing namespace declarations. Adding the correct <code>xmlns</code> attribute to the SVG element resolved this. I also had an error where an SVG <code>&lt;text&gt;</code> element contained an ampersand that was not escaped — changing it to <code>&amp;amp;</code> fixed the issue.</p>
+                <p>For the profile page, validation was straightforward since the page uses minimal HTML and relies primarily on JavaScript for dynamic content. This highlighted how pages with less static HTML tend to have fewer validation issues.</p>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Validated pages:</h3>
+            <ul class="top-level-ul">
+                <li><a href="#profileVal">User Profile</a></li>
+                <li><a href="#sitemapVal">Sitemap (SVG)</a></li>
+                <li><a href="#contentVal">Content Page</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p><a href="pageEditor_ST4.html">Back to Page Editor</a> | &copy; 2026 SDG Action Hub — Liyanaarachchi</p>
+    </footer>
+</body>
+</html>

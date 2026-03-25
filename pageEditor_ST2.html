@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor — Sasthindu</title>
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+</head>
+<body>
+    <header id="top"><h1>SDG Action Hub — Page Editor</h1></header>
+    <section class="stud"><h2>Sasthindu (20241422) | Team SDG14 | Splash Screen &amp; Action Impact Simulator</h2></section>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2 id="splash">Splash Screen</h2>
+                <h3>Technical Description</h3>
+                <p>The Splash Screen serves as the first point of interaction. It does not use the shared template but matches the site's green colour palette and Open Sans typography.</p>
+                <p><strong>HTML Structure:</strong> A full-viewport wrapper <code>&lt;div class="splash-wrapper"&gt;</code> contains a background image layer, a gradient overlay for readability, and a content area with the website title (<code>&lt;h1&gt;</code>), mission statement (<code>&lt;p class="mission"&gt;</code>), team member list (<code>&lt;ul class="team-list"&gt;</code>), loader animation, countdown, and skip button.</p>
+                <p><strong>Auto-redirect:</strong> An HTML <code>&lt;meta http-equiv="refresh" content="4;url=home.html"&gt;</code> tag automatically redirects to the home page after 4 seconds, as specified in the coursework brief.</p>
+                <p><strong>CSS Techniques:</strong> The background uses <code>background: center/cover no-repeat</code> for full-screen scaling. The overlay uses a <code>linear-gradient</code> with semi-transparent colours. The CSS loader animation uses <code>@keyframes spin</code> rotating a bordered circle 360 degrees. Flexbox centres all content vertically and horizontally. The skip button uses <code>backdrop-filter: blur(4px)</code> for a frosted glass effect.</p>
+                <p><strong>JavaScript:</strong> A <code>setInterval</code> timer decrements a counter every second, updating the countdown text from 4 to 1. The skip button uses <code>addEventListener('click')</code> to clear the interval and immediately navigate via <code>window.location.href</code>.</p>
+
+                <h3>Accessibility</h3>
+                <p>The loader div includes <code>aria-hidden="true"</code> since it is decorative. Text contrast is ensured through the gradient overlay. The skip button is keyboard-focusable and clearly labelled.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST2.html#splashVal">View Splash Screen validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="splash.html" target="_blank">Open Splash Screen</a></p>
+            </section>
+
+            <section>
+                <h2 id="ais">SDG Action Impact Simulator</h2>
+                <h3>Technical Description</h3>
+                <p>The AIS page uses the shared template and features 6 action cards that users can click to select sustainable actions related to SDG 14.</p>
+                <p><strong>HTML Structure:</strong> Each card is a <code>&lt;div class="action-card"&gt;</code> with a <code>data-points</code> attribute. Cards contain an image, category label, title, description, and impact point display. A feedback summary area shows the running total.</p>
+                <p><strong>JavaScript Interactivity:</strong> Click event listeners toggle a <code>.selected</code> class on cards. The <code>updateScore()</code> function iterates through all cards, sums points from selected ones, determines the impact level (Low: 0-5, Medium: 6-10, High: 11+), and updates the feedback area. Background images change dynamically via <code>style.backgroundImage</code> based on the current impact level. A reset button removes all <code>.selected</code> classes and re-runs the score calculation.</p>
+                <p><strong>Embedded CSS:</strong> Over 6 CSS rules handle the card grid layout, selection state (border colour change and checkmark pseudo-element), card body styling, and feedback area presentation.</p>
+
+                <h3>Accessibility</h3>
+                <p>All card images have descriptive alt text. Selected cards have a visible green border and checkmark icon. The feedback area uses clear heading hierarchy. Impact level text is descriptive and not colour-dependent alone.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST2.html#aisVal">View AIS validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="ais.html" target="_blank">Open Action Impact Simulator</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page — Marine Protected Areas</h2>
+                <h3>Technical Description</h3>
+                <p>This content page covers Marine Protected Areas with four sections, an internal navigation menu using anchor links, four images with alt text, and a fixed "Go to Top" button.</p>
+                <p><strong>CSS Techniques:</strong> Embedded CSS provides internal navigation styling with flexbox and hover effects, image rounding with <code>border-radius</code> and shadows, and a fixed position "Go to Top" button.</p>
+
+                <h3>Accessibility</h3>
+                <p>Semantic headings follow <code>&lt;h1&gt;</code> to <code>&lt;h2&gt;</code> hierarchy. All images include descriptive alt text. The page navigation section uses <code>aria-label</code>.</p>
+
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST2.html#contentVal">View Content Page validation report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="content_ST2.html" target="_blank">Open Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge">Challenges and Lessons Learned</h2>
+                <p>The countdown timer on the splash screen initially conflicted with the meta refresh — both would fire independently. I resolved this by keeping the meta refresh as the primary redirect mechanism (as required by the spec) and using JavaScript only for the visual countdown and skip functionality.</p>
+                <p>For the AIS, calculating impact scores required careful planning of the data model. Using <code>data-*</code> attributes on HTML elements kept the JavaScript clean and the HTML readable. I learned the importance of separating data from presentation logic.</p>
+            </section>
+
+            <section>
+                <h2 id="compliance">Compliance with JANET Regulations</h2>
+                <p>All content is original and suitable for educational publication. No personal data is collected or transmitted. Images are royalty-free and properly referenced. The website does not contain offensive, misleading, or commercially promotional content. All external resources are credited in the references section.</p>
+            </section>
+
+            <section>
+                <h2 id="group">Group Meetings and Individual Contribution Log</h2>
+                <table>
+                    <thead>
+                        <tr><th colspan="6">Group Meetings and Contribution Log</th></tr>
+                        <tr><th>Meeting</th><th>Date &amp; Time</th><th>Format</th><th>Objective</th><th>Attended</th><th>Your Individual Contribution</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>3 Feb 2026</td><td>Face-to-face</td><td>Agree SDG and assign roles</td><td>Yes</td><td>Agreed to take on splash screen and AIS. Suggested ocean-themed background for splash.</td></tr>
+                        <tr><td>2</td><td>10 Feb 2026</td><td>Online (Teams)</td><td>Design review</td><td>Yes</td><td>Provided feedback on template colour palette. Began splash screen wireframe.</td></tr>
+                        <tr><td>3</td><td>17 Feb 2026</td><td>Face-to-face</td><td>File naming and structure</td><td>Yes</td><td>Confirmed ais.html as the file name. Tested template integration with my pages.</td></tr>
+                        <tr><td>4</td><td>3 Mar 2026</td><td>Online (Teams)</td><td>Progress review</td><td>Yes</td><td>Demonstrated working splash countdown and AIS card selection. Got feedback from team.</td></tr>
+                        <tr><td>5</td><td>10 Mar 2026</td><td>Face-to-face</td><td>Content and accessibility</td><td>Yes</td><td>Added alt text to all AIS card images. Wrote content for Marine Protected Areas page.</td></tr>
+                        <tr><td>6</td><td>17 Mar 2026</td><td>Online (Teams)</td><td>Final testing</td><td>Yes</td><td>Validated all pages. Fixed meta refresh timing issue. Prepared validation screenshots.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <ul class="ref">
+                    <li>Duckett, J., 2011. <i>HTML and CSS: Design and Build Websites.</i> John Wiley &amp; Sons.</li>
+                    <li>MDN Web Docs (2026) <i>meta http-equiv refresh.</i> Available at: <a href="#">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta</a> (Accessed: 12 Feb 2026).</li>
+                    <li>iStock (2026) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Accessed: 12 Feb 2026).</li>
+                    <li>United Nations (2026) <i>SDG 14: Life Below Water.</i> Available at: <a href="#">https://sdgs.un.org/goals/goal14</a> (Accessed: 3 Feb 2026).</li>
+                </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                <li><strong>Sasthindu (20241422)</strong></li>
+                <ul>
+                    <li><a href="#splash">Splash Screen</a></li>
+                    <li><a href="#ais">Action Impact Simulator</a></li>
+                    <li><a href="#content">Content Page</a></li>
+                </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer><p>&copy; 2026 SDG Action Hub — Sasthindu Page Editor</p></footer>
+</body>
+</html>

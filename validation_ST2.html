@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Page — Sasthindu</title>
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+</head>
+<body>
+    <header id="top"><h1>SDG Action Hub — Validation Report</h1></header>
+    <section class="stud"><h2>Sasthindu (20241422) | Team SDG14 | Splash Screen &amp; Action Impact Simulator</h2></section>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2 id="splashVal">Splash Screen Validation Report</h2>
+                <p>The Splash Screen was validated with no errors. The meta refresh tag, CSS animation keyframes, and JavaScript countdown all passed validation. One informational message about the http-equiv attribute was noted but is expected and valid per the HTML5 specification.</p>
+                <img src="validationSnapshots/val_splash.png" alt="W3C validation results for splash.html showing no errors">
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST2.html#splash">View Splash Screen technical description in Page Editor</a></p>
+            </section>
+
+            <section>
+                <h2 id="aisVal">Action Impact Simulator Validation Report</h2>
+                <p>The AIS page passed validation with no errors. All data attributes follow valid HTML5 naming conventions. The embedded CSS and inline JavaScript are correctly structured within their respective elements.</p>
+                <img src="validationSnapshots/val_ais.png" alt="W3C validation results for ais.html showing no errors">
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST2.html#ais">View AIS technical description in Page Editor</a></p>
+            </section>
+
+            <section>
+                <h2 id="contentVal">Content Page Validation Report</h2>
+                <p>The Content Page (Marine Protected Areas) validated successfully with no errors. All sections use proper heading hierarchy and anchor links target valid id attributes.</p>
+                <img src="validationSnapshots/val_content_ST2.png" alt="W3C validation results for content_ST2.html showing no errors">
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST2.html#content">View Content Page technical description in Page Editor</a></p>
+            </section>
+
+            <section>
+                <h2 id="reflection">Reflection on Validation</h2>
+                <p>I initially had a validation error because the meta refresh tag was missing the <code>content</code> attribute value separator. Correcting the format to <code>content="4;url=home.html"</code> resolved this. I also learned that embedded style blocks must be placed within the <code>&lt;head&gt;</code> for valid HTML5, which I had initially placed incorrectly in the body.</p>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Validated pages:</h3>
+            <ul class="top-level-ul">
+                <li><a href="#splashVal">Splash Screen</a></li>
+                <li><a href="#aisVal">Action Impact Simulator</a></li>
+                <li><a href="#contentVal">Content Page</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p><a href="pageEditor_ST2.html">Back to Page Editor</a> | &copy; 2026 SDG Action Hub — Sasthindu</p>
+    </footer>
+</body>
+</html>

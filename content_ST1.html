@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG Action Hub | Ocean Pollution</title>
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EMBEDDED CSS — Content Page (Student 1) -->
+    <style>
+        /* Internal navigation menu */
+        .content-nav {
+            background: var(--white);
+            padding: 16px 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .content-nav h3 {
+            margin-bottom: 8px;
+        }
+
+        .content-nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .content-nav a {
+            text-decoration: none;
+            padding: 6px 14px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .content-nav a:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Content sections */
+        .content-article {
+            margin-bottom: 30px;
+        }
+
+        .content-article h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        .content-article img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 16px 0;
+            max-width: 100%;
+        }
+
+        /* Go to top button */
+        .go-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+            z-index: 100;
+        }
+
+        .go-top:hover {
+            background: var(--secondary-color);
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body id="top">
+
+    <!-- SHARED HEADER -->
+    <header class="site-header">
+        <div class="container header-top">
+            <div class="brand">
+                <img src="images/logo.png" alt="SDG Action Hub logo — a globe with colourful SDG segments" class="logo">
+                <div class="brand-text">
+                    <h1>SDG Action Hub</h1>
+                    <p>Small Actions, Big Impact</p>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="ais.html" class="nav-link">Action Impact Simulator</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="profile.html" class="nav-link">User Profile</a></li>
+                    <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="sitemap.html" class="nav-link">Sitemap</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE CONTENT — Content Page Student 1: Ocean Pollution -->
+    <main class="container main-content">
+
+        <h1>Ocean Pollution: The Invisible Threat</h1>
+
+        <!-- Internal navigation -->
+        <nav class="content-nav" aria-label="Page sections">
+            <h3>On This Page</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#plastic-problem">The Plastic Problem</a></li>
+                <li><a href="#chemical-runoff">Chemical Runoff</a></li>
+                <li><a href="#solutions">What You Can Do</a></li>
+            </ul>
+        </nav>
+
+        <!-- Section 1 -->
+        <section class="content-article" id="introduction">
+            <h2>Introduction</h2>
+            <img src="images/content/ocean-pollution.jpg" alt="Aerial photograph showing plastic debris collected by ocean currents into a visible patch">
+            <p>Ocean pollution is one of the most pressing environmental challenges of our time. From visible plastic waste washing up on beaches to invisible microplastics entering the food chain, the health of our oceans is deteriorating at an alarming rate. The United Nations estimates that by 2050, there could be more plastic in the ocean than fish by weight if current trends continue.</p>
+            <p>This page explores the key sources of ocean pollution, why it matters for marine biodiversity and human health, and practical actions that students and communities can take to reverse the damage.</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="content-article" id="plastic-problem">
+            <h2>The Plastic Problem</h2>
+            <img src="images/content/plastic-ocean.jpg" alt="Close-up of plastic bottles and packaging floating in murky seawater">
+            <p>Every year, approximately 8 million tonnes of plastic enter the ocean. Single-use items like bags, bottles, straws, and food packaging make up the majority of this waste. Once in the water, plastic breaks down into microplastics — tiny fragments less than 5mm in size — that are consumed by marine organisms from plankton to whales.</p>
+            <p>The Great Pacific Garbage Patch, a massive accumulation of floating debris between Hawaii and California, covers an area roughly three times the size of France. While cleanup efforts are underway, preventing plastic from entering the ocean in the first place is far more effective.</p>
+            <p>Students can make a meaningful difference by refusing single-use plastics, carrying reusable alternatives, and supporting brands that use sustainable packaging. Campus-wide initiatives such as plastic-free pledges and swap events can amplify individual efforts into collective impact.</p>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="content-article" id="chemical-runoff">
+            <h2>Chemical Runoff and Dead Zones</h2>
+            <img src="images/content/chemical-runoff.jpg" alt="Agricultural land bordering a river with visible algal bloom caused by nutrient runoff">
+            <p>Chemical pollution from agricultural fertilisers, industrial waste, and untreated sewage creates nutrient-rich conditions that lead to harmful algal blooms. When these blooms decompose, they consume oxygen in the water, creating "dead zones" where marine life cannot survive.</p>
+            <p>There are currently over 500 dead zones worldwide, affecting coastal ecosystems and the fishing communities that depend on them. The Gulf of Mexico dead zone, caused largely by agricultural runoff from the Mississippi River basin, covers approximately 15,000 square kilometres each summer.</p>
+            <p>Reducing chemical runoff requires systemic change in agricultural practices, but individuals can contribute by choosing organic produce when possible, properly disposing of household chemicals, and supporting local environmental policies that regulate industrial discharge.</p>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="content-article" id="solutions">
+            <h2>What You Can Do</h2>
+            <img src="images/content/ocean-action.jpg" alt="Group of students holding handmade signs at an ocean conservation awareness event">
+            <p>Protecting the ocean starts with everyday choices. Here are practical actions that students and communities can take to reduce ocean pollution:</p>
+            <ul>
+                <li><strong>Refuse single-use plastics:</strong> Carry a reusable bottle, bag, and coffee cup wherever you go.</li>
+                <li><strong>Participate in cleanups:</strong> Join local beach or river cleanup events to prevent waste from reaching the ocean.</li>
+                <li><strong>Support sustainable brands:</strong> Choose products with minimal or recyclable packaging.</li>
+                <li><strong>Spread awareness:</strong> Share information about ocean pollution on social media and in your community.</li>
+                <li><strong>Advocate for change:</strong> Support policies that reduce plastic production and improve waste management infrastructure.</li>
+            </ul>
+            <p>Every action counts. When multiplied across communities, these individual choices create the momentum needed to turn the tide on ocean pollution.</p>
+        </section>
+
+        <!-- Go to top button -->
+        <a href="#top" class="go-top" aria-label="Go to top of page">&#8679;</a>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>About This Site</h3>
+                <p>SDG Action Hub is a student project designed to promote action-based awareness and participation in sustainability goals.</p>
+            </div>
+            <div>
+                <h3>Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="pageEditor_ST1.html">Page Editor</a></li>
+                    <li><a href="validation_ST1.html">Validation</a></li>
+                    <li><a href="#">Accessibility &amp; Compliance</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Student Details</h3>
+                <p>Name: PVS Kithnuka (20241421)</p>
+                <p>Role: Template, Home Page &amp; Gallery</p>
+                <p>Email: kithnuka@email.com</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 SDG Action Hub. Student coursework project.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

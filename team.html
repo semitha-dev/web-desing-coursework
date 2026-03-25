@@ -17,6 +17,7 @@
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 24px;
             margin-top: 20px;
+            align-items: start;
         }
 
         /* Team member card */
@@ -31,8 +32,7 @@
         }
 
         /* Hover effect on the card */
-        .team-member:hover,
-        .team-member:focus-within {
+        .team-member:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
         }
@@ -46,8 +46,7 @@
         }
 
         /* Hover: slight zoom on image */
-        .team-member:hover img,
-        .team-member:focus-within img {
+        .team-member:hover img {
             transform: scale(1.05);
             opacity: 0.9;
         }
@@ -80,8 +79,7 @@
         }
 
         /* Reveal on hover or keyboard focus */
-        .team-member:hover .team-details,
-        .team-member:focus-within .team-details {
+        .team-member:hover .team-details {
             max-height: 250px;
             padding: 14px 16px;
         }
@@ -190,7 +188,7 @@
                         <p class="role">Splash Screen &amp; Action Impact Simulator</p>
                     </div>
                     <div class="team-details">
-                        <p><strong>Full Name:</strong> Sasthindu</p>
+                        <p><strong>Full Name:</strong> Sathsindu</p>
                         <p><strong>Role:</strong> Splash Screen &amp; AIS</p>
                         <p><strong>Pages contributed:</strong></p>
                         <ul>

@@ -282,9 +282,7 @@ button,
 }
 
 button:hover,
-.btn:hover,
-button:focus,
-.btn:focus {
+.btn:hover {
     background-color: rgb(10, 56, 6);
     color: rgb(255, 255, 255);
     outline: none;
@@ -379,12 +377,16 @@ label {
    ACCESSIBILITY / FOCUS STYLES
 ========================= */
 a:focus,
-button:focus,
 input:focus,
 textarea:focus,
 select:focus {
     outline: 3px solid var(--accent-color);
     outline-offset: 2px;
+}
+
+button:focus,
+.btn:focus {
+    outline: none;
 }
 
 /* =========================

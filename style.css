@@ -9,9 +9,6 @@
     box-sizing: border-box;
 }
 
-/* =========================
-   COLOUR PALETTE (Root Variables)
-========================= */
 :root {
     --primary-color: #05AB6D;
     --secondary-color: #048a57;
@@ -26,9 +23,6 @@
     --transition: all 0.3s ease;
 }
 
-/* =========================
-   BODY
-========================= */
 body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     background-color: var(--light-bg);
@@ -36,18 +30,12 @@ body {
     line-height: 1.7;
 }
 
-/* =========================
-   CONTAINER
-========================= */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* =========================
-   FONTS & HEADINGS
-========================= */
 h1,
 h2,
 h3,
@@ -73,9 +61,6 @@ h3 {
     font-weight: 700;
 }
 
-/* =========================
-   HEADER
-========================= */
 .site-header {
     background: var(--white);
     color: var(--white);
@@ -112,9 +97,6 @@ h3 {
     font-size: 0.95rem;
 }
 
-/* =========================
-   NAVIGATION BAR
-========================= */
 .navbar {
     background: var(--dark-text);
     margin: 0;
@@ -156,17 +138,11 @@ h3 {
     background: var(--accent-color);
 }
 
-/* =========================
-   MAIN CONTENT AREA
-========================= */
 .main-content {
     padding: 40px 0;
     min-height: 70vh;
 }
 
-/* =========================
-   CARDS — Reusable content containers
-========================= */
 .hero-section {
     margin-bottom: 30px;
 }
@@ -220,9 +196,6 @@ h3 {
     gap: 20px;
 }
 
-/* =========================
-   IMAGES
-========================= */
 img {
     max-width: 100%;
     height: auto;
@@ -240,9 +213,6 @@ img {
     padding: 4px;
 }
 
-/* =========================
-   LINKS
-========================= */
 a {
     color: var(--primary-color);
     transition: var(--transition);
@@ -252,9 +222,6 @@ a:hover {
     color: var(--secondary-color);
 }
 
-/* =========================
-   BUTTONS
-========================= */
 button,
 .btn {
     display: inline-block;
@@ -278,9 +245,6 @@ button:hover,
     outline: none;
 }
 
-/* =========================
-   FORMS — Inputs, Textareas, Selects
-========================= */
 input,
 textarea,
 select {
@@ -310,9 +274,6 @@ label {
     color: var(--dark-text);
 }
 
-/* =========================
-   FOOTER
-========================= */
 .site-footer {
     background-color: var(--dark-text);
     color: var(--white);
@@ -363,9 +324,6 @@ label {
     font-size: 0.9rem;
 }
 
-/* =========================
-   ACCESSIBILITY / FOCUS STYLES
-========================= */
 a:focus,
 input:focus,
 textarea:focus,
@@ -379,9 +337,6 @@ button:focus,
     outline: none;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
 @media (max-width: 900px) {
     .footer-grid {
         grid-template-columns: 1fr;

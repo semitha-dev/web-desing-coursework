@@ -15,7 +15,6 @@
             <section>
                 <h2 id="homeVal">Home Page Validation Report</h2>
                 <p>The Home Page was validated using the W3C Markup Validation Service with no errors. Two informational warnings were noted regarding trailing slashes on void elements, which do not affect functionality or standards compliance.</p>
-                <img src="validationSnapshots/val_home.png" alt="W3C validation results for home.html showing no errors">
                 <h3>Back to Page Editor</h3>
                 <p><a href="pageEditor_ST1.html#home">View Home Page technical description in Page Editor</a></p>
             </section>
@@ -23,7 +22,6 @@
             <section>
                 <h2 id="galleryVal">Gallery Page Validation Report</h2>
                 <p>The Gallery Page passed W3C validation with no errors. The inline JavaScript and modal structure were validated successfully. All data attributes use valid HTML5 syntax.</p>
-                <img src="validationSnapshots/val_gallery.png" alt="W3C validation results for gallery.html showing no errors">
                 <h3>Back to Page Editor</h3>
                 <p><a href="pageEditor_ST1.html#gallery">View Gallery Page technical description in Page Editor</a></p>
             </section>
@@ -31,15 +29,15 @@
             <section>
                 <h2 id="contentVal">Content Page Validation Report</h2>
                 <p>The Content Page (Ocean Pollution) validated successfully with no errors. All heading levels are sequential, anchor links use valid id targets, and embedded CSS is correctly placed within a style element.</p>
-                <img src="validationSnapshots/val_content_ST1.png" alt="W3C validation results for content_ST1.html showing no errors">
                 <h3>Back to Page Editor</h3>
                 <p><a href="pageEditor_ST1.html#content">View Content Page technical description in Page Editor</a></p>
             </section>
 
             <section>
                 <h2 id="reflection">Reflection on Validation</h2>
-                <p>During validation, I initially encountered an error due to a duplicate <code>id</code> attribute on two navigation links. This was resolved by ensuring each element has a unique identifier. I also received a warning about the inline <code>style</code> attribute on one element, which I moved to the embedded CSS block for better separation of concerns.</p>
-                <p>The validation process reinforced the importance of checking HTML structure regularly during development rather than only at the end, as catching errors early is much simpler to fix.</p>
+                <p>During validation, I encountered several heading hierarchy errors across the pages. The Home Page initially had an <code>&lt;h4&gt;</code> following an <code>&lt;h2&gt;</code>, skipping the <code>&lt;h3&gt;</code> level. I corrected this by changing all gallery tile headings from <code>&lt;h4&gt;</code> to <code>&lt;h3&gt;</code>. Similarly, the Content Page had an <code>&lt;h3&gt;</code> immediately following the <code>&lt;h1&gt;</code> page title, which I fixed by changing it to <code>&lt;h2&gt;</code>.</p>
+                <p>The Gallery Page also had a section lacking a heading and an image with an empty <code>src</code> attribute. I resolved these by adding a hidden heading to the section and providing a placeholder image source.</p>
+                <p>This validation process reinforced the importance of maintaining proper semantic heading hierarchy and ensuring all elements have valid, non-empty attributes, as these are fundamental to both accessibility and standards compliance.</p>
             </section>
 
             <p class="top"><a href="#top">Go top</a></p>

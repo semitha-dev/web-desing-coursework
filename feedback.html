@@ -6,17 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDG Action Hub | Feedback &amp; Programmes</title>
 
-    <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- EMBEDDED CSS — Feedback & Programme Directory (Student 3) -->
     <style>
-        /* Scrollable programme cards section */
         .programme-section {
             margin-bottom: 30px;
         }
 
-        /* Programme card layout */
         .programme-cards {
             display: flex;
             overflow-x: auto;
@@ -80,7 +76,6 @@
             padding: 8px 18px;
         }
 
-        /* Sort dropdown */
         .sort-bar {
             display: flex;
             justify-content: space-between;
@@ -95,7 +90,6 @@
             min-width: 180px;
         }
 
-        /* Reviews section */
         .reviews-section {
             margin-bottom: 30px;
         }
@@ -186,7 +180,6 @@
             color: var(--muted-text);
         }
 
-        /* Feedback form section */
         .feedback-form-section {
             background: var(--white);
             padding: 28px;
@@ -248,9 +241,6 @@
 
 <body>
 
-    <!-- ===================================================
-         SHARED HEADER — START
-    ==================================================== -->
     <header class="site-header">
         <div class="container header-top">
             <div class="brand">
@@ -269,7 +259,6 @@
                     <li><a href="ais.html" class="nav-link">Action Impact Simulator</a></li>
                     <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                     <li><a href="profile.html" class="nav-link">User Profile</a></li>
-                    <!-- Feedback is the active page -->
                     <li><a href="feedback.html" class="nav-link active">Feedback</a></li>
                     <li><a href="team.html" class="nav-link">Team</a></li>
                     <li><a href="sitemap.html" class="nav-link">Sitemap</a></li>
@@ -277,13 +266,7 @@
             </div>
         </nav>
     </header>
-    <!-- ===================================================
-         SHARED HEADER — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         PAGE CONTENT — FEEDBACK & PROGRAMME DIRECTORY (Student 3)
-    ==================================================== -->
     <main class="container main-content">
 
         <section class="hero-section">
@@ -297,7 +280,6 @@
             </div>
         </section>
 
-        <!-- Sort/filter bar -->
         <div class="sort-bar">
             <h3>Ocean Conservation Programmes</h3>
             <select aria-label="Sort programmes">
@@ -308,11 +290,8 @@
             </select>
         </div>
 
-        <!-- Scrollable programme cards section -->
         <section class="programme-section">
             <div class="programme-cards">
-
-                <!-- Programme 1 -->
                 <div class="programme-card">
                     <img src="images/gallery/Coastal%20Cleanup%20Crew.jpg"
                         alt="Volunteers on a beach collecting plastic waste during a cleanup event">
@@ -323,8 +302,6 @@
                         <a href="#" class="btn">Get Involved</a>
                     </div>
                 </div>
-
-                <!-- Programme 2 -->
                 <div class="programme-card">
                     <img src="images/gallery/Coral%20Restoration%20Project.jpg"
                         alt="Diver underwater planting coral fragments onto a reef structure">
@@ -335,8 +312,6 @@
                         <a href="#" class="btn">Learn More</a>
                     </div>
                 </div>
-
-                <!-- Programme 3 -->
                 <div class="programme-card">
                     <img src="images/gallery/Marine%20Education%20Workshops.jpg"
                         alt="Students attending a marine biology workshop with an educator">
@@ -347,8 +322,6 @@
                         <a href="#" class="btn">Join</a>
                     </div>
                 </div>
-
-                <!-- Programme 4 -->
                 <div class="programme-card">
                     <img src="images/gallery/Plastic-Free%20Campus%20Pledge.jpg"
                         alt="University campus with recycling stations and reusable cup dispenser">
@@ -363,7 +336,6 @@
             </div>
         </section>
 
-        <!-- Ratings and Reviews Section -->
         <section class="reviews-section">
             <h3>Ratings &amp; Reviews</h3>
 
@@ -378,8 +350,6 @@
             </div>
 
             <div class="review-cards">
-
-                <!-- Review 1 -->
                 <div class="review-card">
                     <div class="review-rating">9/10 Outstanding</div>
                     <h4>Life-changing experience</h4>
@@ -390,8 +360,6 @@
                     <p class="reviewer">Nimuthu.P</p>
                     <p class="review-date">15 March 2026</p>
                 </div>
-
-                <!-- Review 2 -->
                 <div class="review-card">
                     <div class="review-rating">8/10 Excellent</div>
                     <h4>Great for students</h4>
@@ -402,8 +370,6 @@
                     <p class="reviewer">Senuda.W</p>
                     <p class="review-date">18 March 2026</p>
                 </div>
-
-                <!-- Review 3 -->
                 <div class="review-card">
                     <div class="review-rating">9/10 Outstanding</div>
                     <h4>Rewarding volunteer work</h4>
@@ -414,8 +380,6 @@
                     <p class="reviewer"> Janith.R</p>
                     <p class="review-date">20 March 2026</p>
                 </div>
-
-                <!--Review 4-->
                 <div class="review-card">
                     <div class="review-rating">10/10 Outstanding</div>
                     <h4>Best experience ever</h4>
@@ -444,13 +408,10 @@
             </div>
         </section>
 
-        <!-- Feedback Form Section -->
         <section class="feedback-form-section">
             <h3>Send Us Your Feedback</h3>
 
             <form id="feedbackForm" novalidate>
-
-                <!-- Personal details fieldset -->
                 <fieldset>
                     <legend>Personal Details</legend>
 
@@ -477,8 +438,6 @@
                         <textarea id="address" name="address" rows="2" placeholder="Your address"></textarea>
                     </div>
                 </fieldset>
-
-                <!-- Feedback details fieldset -->
                 <fieldset>
                     <legend>Feedback Details</legend>
 
@@ -514,21 +473,13 @@
 
                 <button type="submit">Submit Feedback</button>
             </form>
-
-            <!-- Confirmation message -->
             <div class="success-msg" id="successMsg">
                 Thank you for your feedback! Your response has been recorded.
             </div>
         </section>
 
     </main>
-    <!-- ===================================================
-         PAGE CONTENT — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         SHARED FOOTER — START
-    ==================================================== -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
@@ -555,11 +506,7 @@
             <p>&copy; 2026 SDG Action Hub. Student coursework project.</p>
         </div>
     </footer>
-    <!-- ===================================================
-         SHARED FOOTER — END
-    ==================================================== -->
 
-    <!-- External JavaScript — Feedback form interactivity -->
     <script src="js/feedback.js"></script>
 
 </body>

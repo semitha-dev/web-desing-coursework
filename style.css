@@ -1,18 +1,8 @@
-/* ============================================================
-   GLOBAL CSS — SDG Action Hub
-   ============================================================
-   Shared styles used across ALL pages.
-   Page-specific styles are embedded in each HTML file.
-   ============================================================ */
 
-/* =========================
-   GOOGLE FONTS
-========================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
 
-/* =========================
-   GLOBAL RESET
-========================= */
+
 * {
     margin: 0;
     padding: 0;

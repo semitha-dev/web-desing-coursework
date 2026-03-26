@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDG Action Hub | User Profile</title>
 
-    <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- EMBEDDED CSS — User Profile (Student 4) -->
     <style>
-        /* Profile controls area */
         .profile-controls {
             display: flex;
             flex-wrap: wrap;
@@ -20,7 +17,6 @@
             align-items: center;
         }
 
-        /* Step buttons */
         .step-btn {
             padding: 10px 20px;
             border-radius: 8px;
@@ -40,7 +36,6 @@
             border: 1px solid #ffe082;
         }
 
-        /* Progress bar container */
         .progress-container {
             background: var(--white);
             border-radius: var(--radius);
@@ -76,7 +71,6 @@
             font-size: 0.9rem;
         }
 
-        /* Status message */
         .status-msg {
             color: var(--muted-text);
             font-size: 0.9rem;
@@ -86,7 +80,6 @@
             border-radius: 8px;
         }
 
-        /* Profile output display */
         .profile-output {
             background: var(--white);
             border-radius: var(--radius);
@@ -99,7 +92,6 @@
             margin-bottom: 16px;
         }
 
-        /* Individual step section in output */
         .profile-step-section {
             display: none;
             margin-bottom: 20px;
@@ -139,7 +131,6 @@
             color: var(--muted-text);
         }
 
-        /* Confirmation section */
         .confirmation-section {
             display: none;
             margin-top: 20px;
@@ -162,9 +153,6 @@
 
 <body>
 
-    <!-- ===================================================
-         SHARED HEADER — START
-    ==================================================== -->
     <header class="site-header">
         <div class="container header-top">
             <div class="brand">
@@ -181,7 +169,6 @@
                     <li><a href="home.html" class="nav-link">Home</a></li>
                     <li><a href="ais.html" class="nav-link">Action Impact Simulator</a></li>
                     <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <!-- Profile is the active page -->
                     <li><a href="profile.html" class="nav-link active">User Profile</a></li>
                     <li><a href="feedback.html" class="nav-link">Feedback</a></li>
                     <li><a href="team.html" class="nav-link">Team</a></li>
@@ -190,13 +177,7 @@
             </div>
         </nav>
     </header>
-    <!-- ===================================================
-         SHARED HEADER — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         PAGE CONTENT — USER PROFILE (Student 4)
-    ==================================================== -->
     <main class="container main-content">
 
         <section class="hero-section">
@@ -210,14 +191,12 @@
             </div>
         </section>
 
-        <!-- Controls -->
         <section>
             <div class="profile-controls">
                 <button class="btn" id="startBtn">Start / Continue Profile</button>
                 <button class="btn" id="resetBtn" style="background:#e53935;">Reset Profile</button>
             </div>
 
-            <!-- Step buttons for revisiting -->
             <div class="profile-controls" id="stepButtons">
                 <span style="font-weight:600;">Steps:</span>
                 <button class="step-btn" id="step1Btn">Step 1: Basics</button>
@@ -226,7 +205,6 @@
             </div>
         </section>
 
-        <!-- Progress indicator -->
         <section class="progress-container">
             <p class="progress-text">Completion: <span id="progressPercent">0%</span>
                 <span class="progress-detail" id="progressDetail">(0/9 prompts completed)</span>
@@ -237,7 +215,6 @@
             <p class="status-msg" id="statusMsg">Click "Start / Continue Profile" to begin.</p>
         </section>
 
-        <!-- Revisit buttons -->
         <section>
             <div class="profile-controls">
                 <button class="btn" id="revisit1">Revisit Step 1</button>
@@ -246,11 +223,9 @@
             </div>
         </section>
 
-        <!-- Profile output display -->
         <section class="profile-output">
             <h3>Your Profile (Updates Progressively)</h3>
 
-            <!-- Step 1 output -->
             <div class="profile-step-section" id="step1Output">
                 <h4>Step 1: Basics</h4>
                 <table class="profile-table">
@@ -269,7 +244,6 @@
                 </table>
             </div>
 
-            <!-- Step 2 output -->
             <div class="profile-step-section" id="step2Output">
                 <h4>Step 2: Interests</h4>
                 <table class="profile-table">
@@ -288,7 +262,6 @@
                 </table>
             </div>
 
-            <!-- Step 3 output -->
             <div class="profile-step-section" id="step3Output">
                 <h4>Step 3: Actions</h4>
                 <table class="profile-table">
@@ -307,7 +280,6 @@
                 </table>
             </div>
 
-            <!-- Confirmation -->
             <div class="confirmation-section" id="confirmSection">
                 <h4>Profile Complete!</h4>
                 <p>When you complete all steps, you will see a confirmation message here.</p>
@@ -315,13 +287,7 @@
         </section>
 
     </main>
-    <!-- ===================================================
-         PAGE CONTENT — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         SHARED FOOTER — START
-    ==================================================== -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
@@ -348,11 +314,7 @@
             <p>&copy; 2026 SDG Action Hub. Student coursework project.</p>
         </div>
     </footer>
-    <!-- ===================================================
-         SHARED FOOTER — END
-    ==================================================== -->
 
-    <!-- External JavaScript — Progressive profile building -->
     <script src="js/profile.js"></script>
 
 </body>

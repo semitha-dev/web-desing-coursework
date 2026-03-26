@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDG Action Hub | Home</title>
 
-    <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- EMBEDDED CSS — Home Page (Student 1) — minimum 5 rules -->
     <style>
-        /* Rule 1 — Card grid layout for mission cards */
         .mission-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -19,7 +16,6 @@
             margin-bottom: 40px;
         }
 
-        /* Rule 2 — Card image styling */
         .mission-cards .card img {
             width: 100%;
             height: 200px;
@@ -28,14 +24,12 @@
             margin-bottom: 14px;
         }
 
-        /* Rule 3 — Action highlights list */
         .action-highlights {
             list-style: none;
             padding: 0;
             margin: 12px 0 0 0;
         }
 
-        /* Rule 4 — Action highlight items with checkmark */
         .action-highlights li {
             padding: 4px 0 4px 20px;
             position: relative;
@@ -50,7 +44,6 @@
             font-weight: 700;
         }
 
-        /* Rule 5 — Interactive gallery grid for content pages */
         .content-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -58,7 +51,6 @@
             margin-top: 20px;
         }
 
-        /* Rule 6 — Gallery tile with hover animation */
         .gallery-tile {
             position: relative;
             overflow: hidden;
@@ -75,7 +67,6 @@
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
         }
 
-        /* Rule 7 — Gallery tile image */
         .gallery-tile img {
             width: 100%;
             height: 220px;
@@ -88,7 +79,6 @@
             transform: scale(1.08);
         }
 
-        /* Rule 8 — Gallery tile overlay caption */
         .gallery-tile .tile-caption {
             position: absolute;
             bottom: 0;
@@ -98,7 +88,7 @@
             padding: 20px 16px 14px;
         }
 
-        .gallery-tile .tile-caption h4 {
+        .gallery-tile .tile-caption h3 {
             color: #fff;
             margin: 0 0 4px 0;
             font-size: 1.05rem;
@@ -115,9 +105,6 @@
 
 <body>
 
-    <!-- ===================================================
-         SHARED HEADER — START
-    ==================================================== -->
     <header class="site-header">
         <div class="container header-top">
             <div class="brand">
@@ -132,7 +119,6 @@
         <nav class="navbar" aria-label="Main navigation">
             <div class="container">
                 <ul class="nav-list">
-                    <!-- Home is the active page -->
                     <li><a href="home.html" class="nav-link active">Home</a></li>
                     <li><a href="ais.html" class="nav-link">Action Impact Simulator</a></li>
                     <li><a href="gallery.html" class="nav-link">Gallery</a></li>
@@ -144,16 +130,9 @@
             </div>
         </nav>
     </header>
-    <!-- ===================================================
-         SHARED HEADER — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         PAGE CONTENT — HOME PAGE (Student 1)
-    ==================================================== -->
     <main class="container main-content">
 
-        <!-- Hero introduction -->
         <section class="hero-section">
             <div class="hero-card">
                 <h2>Protecting Life Below Water</h2>
@@ -167,12 +146,9 @@
             </div>
         </section>
 
-        <!-- Mission and Goal Promotion — at least 3 content cards -->
         <section>
             <h2>Why Life Below Water Matters</h2>
             <div class="mission-cards">
-
-                <!-- Card 1 -->
                 <div class="card">
                     <img src="images/content/ocean-pollution.jpg"
                         alt="Plastic debris floating on the ocean surface near a coastline">
@@ -189,8 +165,6 @@
                         <li>Volunteer for a local beach or river cleanup</li>
                     </ul>
                 </div>
-
-                <!-- Card 2 -->
                 <div class="card">
                     <img src="images/content/coral-reef.jpg" alt="Colourful coral reef teeming with tropical fish">
                     <h3>Coral Reefs in Danger</h3>
@@ -206,8 +180,6 @@
                         <li>Reduce your carbon footprint to slow ocean warming</li>
                     </ul>
                 </div>
-
-                <!-- Card 3 -->
                 <div class="card">
                     <img src="images/content/sustainable-fishing.jpg"
                         alt="Fisherman using sustainable line-fishing methods on a small boat">
@@ -228,49 +200,40 @@
             </div>
         </section>
 
-        <!-- Interactive Gallery linking to Content Pages -->
         <section>
             <h2>Explore Our Content</h2>
             <p style="color: var(--muted-text); margin-bottom: 10px;">Click a topic to learn more about how you can take
                 action.</p>
             <div class="content-gallery">
-
-                <!-- Tile 1 — Student 1 Content Page -->
                 <a href="content_ST1.html" class="gallery-tile">
                     <img src="images/content/ocean-pollution.jpg"
                         alt="Plastic waste on a sandy beach — Ocean Pollution topic">
                     <div class="tile-caption">
-                        <h4>Ocean Pollution</h4>
+                        <h3>Ocean Pollution</h3>
                         <p>By PVS Kithnuka</p>
                     </div>
                 </a>
-
-                <!-- Tile 2 — Student 2 Content Page -->
                 <a href="content_ST2.html" class="gallery-tile">
                     <img src="images/content/marine-protected.jpg"
                         alt="Aerial view of a marine protected area — Marine Protected Areas topic">
                     <div class="tile-caption">
-                        <h4>Marine Protected Areas</h4>
+                        <h3>Marine Protected Areas</h3>
                         <p>By Sasthindu</p>
                     </div>
                 </a>
-
-                <!-- Tile 3 — Student 3 Content Page -->
                 <a href="content_ST3.html" class="gallery-tile">
                     <img src="images/content/overfishing.jpg"
                         alt="Large fishing trawler with nets — Overfishing Crisis topic">
                     <div class="tile-caption">
-                        <h4>The Overfishing Crisis</h4>
+                        <h3>The Overfishing Crisis</h3>
                         <p>By Esandu</p>
                     </div>
                 </a>
-
-                <!-- Tile 4 — Student 4 Content Page -->
                 <a href="content_ST4.html" class="gallery-tile">
                     <img src="images/content/coral-reef.jpg"
                         alt="Diver planting coral fragments — Coral Reef Restoration topic">
                     <div class="tile-caption">
-                        <h4>Coral Reef Restoration</h4>
+                        <h3>Coral Reef Restoration</h3>
                         <p>By Liyanaarachchi</p>
                     </div>
                 </a>
@@ -279,13 +242,7 @@
         </section>
 
     </main>
-    <!-- ===================================================
-         PAGE CONTENT — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         SHARED FOOTER — START
-    ==================================================== -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
@@ -314,9 +271,6 @@
             <p>&copy; 2026 SDG Action Hub. Student coursework project.</p>
         </div>
     </footer>
-    <!-- ===================================================
-         SHARED FOOTER — END
-    ==================================================== -->
 
 </body>
 

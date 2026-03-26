@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDG Action Hub | Sitemap</title>
 
-    <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- EMBEDDED CSS — Sitemap Page (Liyanaarachchi) — minimum 5 rules -->
     <style>
-        /* SVG sitemap container */
         .sitemap-svg-wrapper {
             background: var(--white);
             border-radius: var(--radius);
@@ -21,7 +18,6 @@
             overflow-x: auto;
         }
 
-        /* Make SVG responsive */
         .sitemap-svg-wrapper svg {
             display: block;
             margin: 0 auto;
@@ -29,7 +25,6 @@
             height: auto;
         }
 
-        /* Hover effect on clickable nodes */
         .sitemap-svg-wrapper a:hover rect {
             filter: brightness(0.9);
         }
@@ -38,7 +33,6 @@
             font-weight: bold;
         }
 
-        /* Focus outline for accessibility */
         .sitemap-svg-wrapper a:focus rect {
             stroke: var(--accent-color);
             stroke-width: 3;
@@ -48,9 +42,6 @@
 
 <body>
 
-    <!-- ===================================================
-         SHARED HEADER — START
-    ==================================================== -->
     <header class="site-header">
         <div class="container header-top">
             <div class="brand">
@@ -70,19 +61,12 @@
                     <li><a href="profile.html" class="nav-link">User Profile</a></li>
                     <li><a href="feedback.html" class="nav-link">Feedback</a></li>
                     <li><a href="team.html" class="nav-link">Team</a></li>
-                    <!-- Sitemap is the active page -->
                     <li><a href="sitemap.html" class="nav-link active">Sitemap</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <!-- ===================================================
-         SHARED HEADER — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         PAGE CONTENT — SITEMAP (Liyanaarachchi)
-    ==================================================== -->
     <main class="container main-content">
 
         <section class="hero-section">
@@ -96,8 +80,6 @@
         </section>
 
         <section class="sitemap-svg-wrapper">
-
-            <!-- SVG SITEMAP — required by spec Section 4.9 (20 marks) -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img"
                 aria-label="Graphical sitemap of SDG Action Hub website">
                 <title>SDG Action Hub — Site Map</title>
@@ -124,23 +106,17 @@
                     </style>
                 </defs>
 
-                <!-- ===== LEVEL 0 — SPLASH ===== -->
                 <a href="splash.html">
                     <rect x="390" y="15" width="180" height="38" class="node" fill="#0277BD" stroke="#01579B" />
                     <text x="480" y="34" class="label" fill="#fff" font-size="14">Splash Screen</text>
                 </a>
                 <line x1="480" y1="53" x2="480" y2="75" class="line" />
-
-                <!-- ===== LEVEL 1 — HOME ===== -->
                 <a href="home.html">
                     <rect x="380" y="75" width="200" height="42" class="node" fill="#00897B" stroke="#00695C" />
                     <text x="480" y="96" class="label" fill="#fff" font-size="15" font-weight="bold">Home</text>
                 </a>
                 <line x1="480" y1="117" x2="480" y2="140" class="line" />
-
-                <!-- Horizontal bar spanning all 7 columns -->
                 <line x1="70" y1="140" x2="890" y2="140" class="line" />
-                <!-- Drops -->
                 <line x1="70" y1="140" x2="70" y2="158" class="line" />
                 <line x1="206" y1="140" x2="206" y2="158" class="line" />
                 <line x1="343" y1="140" x2="343" y2="158" class="line" />
@@ -148,8 +124,6 @@
                 <line x1="617" y1="140" x2="617" y2="158" class="line" />
                 <line x1="753" y1="140" x2="753" y2="158" class="line" />
                 <line x1="890" y1="140" x2="890" y2="158" class="line" />
-
-                <!-- ===== LEVEL 2 — MAIN PAGES (7 boxes, 130 wide, 6px gap) ===== -->
                 <a href="ais.html">
                     <rect x="5" y="158" width="130" height="38" class="node" fill="#1565C0" stroke="#0D47A1" />
                     <text x="70" y="177" class="label" fill="#fff" font-size="11">Action Impact Sim</text>
@@ -176,20 +150,13 @@
                 </a>
                 <rect x="825" y="158" width="130" height="38" class="node" fill="#2E7D32" stroke="#1B5E20" />
                 <text x="890" y="177" class="label" fill="#fff" font-size="12">Content Pages</text>
-
-                <!-- ===== LEVEL 3 — CONTENT PAGES (below, full width row of 4) ===== -->
-                <!-- Trunk from "Content Pages" down to row -->
                 <line x1="890" y1="196" x2="890" y2="220" class="line" />
-                <!-- Bend left to centre of the 4-box row -->
                 <line x1="480" y1="220" x2="890" y2="220" class="line" />
-                <!-- Drops to 4 content boxes (each 210 wide, spaced at x=20,240,460,680) -->
                 <line x1="125" y1="220" x2="125" y2="240" class="line" />
                 <line x1="365" y1="220" x2="365" y2="240" class="line" />
                 <line x1="605" y1="220" x2="605" y2="240" class="line" />
                 <line x1="845" y1="220" x2="845" y2="240" class="line" />
-                <!-- Extend horizontal bar to cover all 4 -->
                 <line x1="125" y1="220" x2="845" y2="220" class="line" />
-
                 <a href="content_ST1.html">
                     <rect x="20" y="240" width="210" height="42" class="node" fill="#43A047" stroke="#2E7D32" />
                     <text x="125" y="255" class="label" fill="#fff" font-size="11">Ocean Pollution</text>
@@ -211,14 +178,10 @@
                     <text x="845" y="271" class="label" fill="#E8F5E9" font-size="9">(Liyanaarachchi)</text>
                 </a>
 
-                <!-- ===== LEVEL 4 — PAGE EDITORS & VALIDATION ===== -->
-                <!-- Background grouping box -->
                 <rect x="15" y="310" width="930" height="130" rx="10" ry="10" fill="#ECEFF1" stroke="#B0BEC5"
                     stroke-width="1" />
                 <text x="480" y="332" class="label" font-size="13" fill="#546E7A" font-weight="bold">Page Editors &amp;
                     Validation</text>
-
-                <!-- Page Editor row (4 boxes) -->
                 <a href="pageEditor_ST1.html">
                     <rect x="30" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00" />
                     <text x="135" y="361" class="label" fill="#fff" font-size="11">Page Editor — ST1</text>
@@ -235,8 +198,6 @@
                     <rect x="720" y="345" width="210" height="32" class="node" fill="#FF8F00" stroke="#EF6C00" />
                     <text x="825" y="361" class="label" fill="#fff" font-size="11">Page Editor — ST4</text>
                 </a>
-
-                <!-- Validation row (4 boxes) -->
                 <a href="validation_ST1.html">
                     <rect x="30" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E" />
                     <text x="135" y="406" class="label" fill="#fff" font-size="11">Validation — ST1</text>
@@ -253,8 +214,6 @@
                     <rect x="720" y="390" width="210" height="32" class="node" fill="#6D4C41" stroke="#4E342E" />
                     <text x="825" y="406" class="label" fill="#fff" font-size="11">Validation — ST4</text>
                 </a>
-
-                <!-- ===== LEGEND ===== -->
                 <rect x="200" y="470" width="560" height="50" rx="8" ry="8" fill="#FAFAFA" stroke="#CFD8DC" />
                 <text x="225" y="490" font-family="Arial, sans-serif" font-size="11" fill="#37474F"
                     font-weight="bold">Legend:</text>
@@ -276,13 +235,7 @@
         </section>
 
     </main>
-    <!-- ===================================================
-         PAGE CONTENT — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         SHARED FOOTER — START
-    ==================================================== -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
@@ -309,9 +262,6 @@
             <p>&copy; 2026 SDG Action Hub. Student coursework project.</p>
         </div>
     </footer>
-    <!-- ===================================================
-         SHARED FOOTER — END
-    ==================================================== -->
 
 </body>
 

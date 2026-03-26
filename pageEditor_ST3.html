@@ -16,10 +16,9 @@
                 <h2 id="feedback">Feedback &amp; Programme Directory</h2>
                 <h3>Technical Description</h3>
                 <p>The Feedback page combines three distinct sections: a scrollable programme directory, a ratings/reviews summary, and a JavaScript-enhanced feedback form.</p>
-                <p><strong>HTML Structure:</strong> The scrollable section uses a wrapper with CSS <code>max-height: 520px; overflow-y: auto</code> containing 4 programme cards in a CSS Grid. Each card has an image, title, description, and call-to-action button. A styled dropdown allows sorting (non-functional as per spec). The reviews section displays an overall rating and 3 review cards with headings, descriptions, reviewer names, dates, and ratings.</p>
-                <p><strong>Form Structure:</strong> Two <code>&lt;fieldset&gt;</code> groups with <code>&lt;legend&gt;</code> elements organise the form into "Personal Details" and "Feedback Details". Fields include text input, email, tel, textarea (with <code>maxlength="500"</code>), select dropdown, date, and datetime-local inputs as required by the specification.</p>
+                <p><strong>HTML Structure:</strong> The scrollable section uses a wrapper with CSS <code>max-height: 520px; overflow-y: auto</code> containing 4 programme cards in a CSS Grid. Each card has an image, title, description, and call-to-action button. A styled dropdown allows sorting (non-functional as per spec). The reviews section displays an overall rating and 3 review cards with headings, descriptions, reviewer names, dates, and ratings. Two <code>&lt;fieldset&gt;</code> groups with <code>&lt;legend&gt;</code> elements organise the form into "Personal Details" and "Feedback Details". Fields include text input, email, tel, textarea (with <code>maxlength="500"</code>), select dropdown, date, and datetime-local inputs as required by the specification.</p>
                 <p><strong>JavaScript Interactivity:</strong> A live character counter updates on each <code>input</code> event on the message textarea. Form validation uses <code>addEventListener('submit')</code> with <code>preventDefault()</code>, checking each field and displaying field-specific error messages via <code>classList.add('show')</code>. Email validation uses a regex pattern. On successful validation, a confirmation message is shown and the form resets.</p>
-                <p><strong>CSS:</strong> An external page-specific CSS file (<code>css/feedback.css</code>) styles the scrollable section, programme cards, review cards, form fields, error messages, and success confirmation. Custom scrollbar styling is applied for webkit browsers.</p>
+                <p><strong>CSS Techniques:</strong> An external page-specific CSS file (<code>css/feedback.css</code>) styles the scrollable section, programme cards, review cards, form fields, error messages, and success confirmation. Custom scrollbar styling is applied for webkit browsers. The scrollable wrapper uses <code>overflow-y: auto</code> for smooth vertical scrolling with hidden overflow on other axes.</p>
 
                 <h3>Accessibility</h3>
                 <p>All form fields have associated <code>&lt;label&gt;</code> elements. Error messages appear near the relevant field. Images include alt text. Fieldset/legend grouping improves form comprehension for screen readers.</p>
@@ -79,12 +78,12 @@
                         <tr><th>Meeting</th><th>Date &amp; Time</th><th>Format</th><th>Objective</th><th>Attended</th><th>Your Individual Contribution</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>1</td><td>3 Feb 2026</td><td>Face-to-face</td><td>Agree SDG and assign roles</td><td>Yes</td><td>Agreed to take on feedback and team pages. Discussed programme directory concept.</td></tr>
-                        <tr><td>2</td><td>10 Feb 2026</td><td>Online (Teams)</td><td>Design review</td><td>Yes</td><td>Reviewed template CSS. Suggested card-based layout for programme listings.</td></tr>
-                        <tr><td>3</td><td>17 Feb 2026</td><td>Face-to-face</td><td>File naming and structure</td><td>Yes</td><td>Confirmed feedback.html and team.html file names. Began form wireframe.</td></tr>
-                        <tr><td>4</td><td>3 Mar 2026</td><td>Online (Teams)</td><td>Progress review</td><td>Yes</td><td>Demonstrated feedback form with live character counter. Got suggestions for review section layout.</td></tr>
-                        <tr><td>5</td><td>10 Mar 2026</td><td>Face-to-face</td><td>Content and accessibility</td><td>Yes</td><td>Added tabindex to team member blocks. Ensured all form labels are properly linked.</td></tr>
-                        <tr><td>6</td><td>17 Mar 2026</td><td>Online (Teams)</td><td>Final testing</td><td>Yes</td><td>Validated all pages. Fixed fieldset styling issue. Captured validation screenshots.</td></tr>
+                        <tr><td>1</td><td>10 Mar 2026</td><td>Face-to-face</td><td>Agree SDG and assign roles</td><td>Yes</td><td>Agreed to take on feedback and team pages. Discussed programme directory concept.</td></tr>
+                        <tr><td>2</td><td>12 Mar 2026</td><td>Online (Teams)</td><td>Design review</td><td>Yes</td><td>Reviewed template CSS. Suggested card-based layout for programme listings.</td></tr>
+                        <tr><td>3</td><td>17 Mar 2026</td><td>Face-to-face</td><td>File naming and structure</td><td>Yes</td><td>Confirmed feedback.html and team.html file names. Began form wireframe.</td></tr>
+                        <tr><td>4</td><td>19 Mar 2026</td><td>Online (Teams)</td><td>Progress review</td><td>Yes</td><td>Demonstrated feedback form with live character counter. Got suggestions for review section layout.</td></tr>
+                        <tr><td>5</td><td>24 Mar 2026</td><td>Face-to-face</td><td>Content and accessibility</td><td>Yes</td><td>Added tabindex to team member blocks. Ensured all form labels are properly linked.</td></tr>
+                        <tr><td>6</td><td>26 Mar 2026</td><td>Online (Teams)</td><td>Final testing</td><td>Yes</td><td>Validated all pages. Fixed fieldset styling issue. Captured validation screenshots.</td></tr>
                     </tbody>
                 </table>
             </section>

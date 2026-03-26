@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDG Action Hub | Gallery</title>
 
-    <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- EMBEDDED CSS — Gallery Page (Student 1) -->
     <style>
-        /* Gallery grid layout */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -19,7 +16,6 @@
             margin-top: 20px;
         }
 
-        /* Gallery item thumbnail container */
         .gallery-item {
             position: relative;
             border-radius: var(--radius);
@@ -49,7 +45,6 @@
             font-size: 0.95rem;
         }
 
-        /* Modal overlay for extended view */
         .gallery-modal {
             display: none;
             position: fixed;
@@ -68,7 +63,6 @@
             display: flex;
         }
 
-        /* Modal content box */
         .modal-content {
             background: var(--white);
             border-radius: var(--radius);
@@ -103,7 +97,6 @@
             line-height: 1.8;
         }
 
-        /* Close button */
         .modal-close {
             position: absolute;
             top: 14px;
@@ -127,7 +120,6 @@
             background: rgba(0, 0, 0, 0.8);
         }
 
-        /* User customisation controls in modal */
         .modal-controls {
             display: flex;
             gap: 12px;
@@ -151,9 +143,6 @@
 
 <body>
 
-    <!-- ===================================================
-         SHARED HEADER — START
-    ==================================================== -->
     <header class="site-header">
         <div class="container header-top">
             <div class="brand">
@@ -170,7 +159,6 @@
                 <ul class="nav-list">
                     <li><a href="home.html" class="nav-link">Home</a></li>
                     <li><a href="ais.html" class="nav-link">Action Impact Simulator</a></li>
-                    <!-- Gallery is the active page -->
                     <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
                     <li><a href="profile.html" class="nav-link">User Profile</a></li>
                     <li><a href="feedback.html" class="nav-link">Feedback</a></li>
@@ -180,13 +168,7 @@
             </div>
         </nav>
     </header>
-    <!-- ===================================================
-         SHARED HEADER — END
-    ==================================================== -->
 
-    <!-- ===================================================
-         PAGE CONTENT — GALLERY (Student 1)
-    ==================================================== -->
     <main class="container main-content">
 
         <section class="hero-section">
@@ -200,11 +182,9 @@
             </div>
         </section>
 
-        <!-- Gallery thumbnails grid -->
         <section>
+            <h2 style="display: none;">Gallery Items</h2>
             <div class="gallery-grid" id="galleryGrid">
-
-                <!-- Gallery item 1 -->
                 <div class="gallery-item" tabindex="0" data-title="Coral Reef Ecosystem"
                     data-img="images/gallery/coral-reef-wide.jpg"
                     data-desc="Coral reefs are often called the rainforests of the sea. They provide food, shelter, and breeding grounds for thousands of marine species. This vibrant ecosystem is under severe threat from ocean warming, acidification, and pollution. Protecting reef systems through marine reserves and reducing carbon emissions is critical for biodiversity.">
@@ -212,8 +192,6 @@
                         alt="Vibrant coral reef with diverse tropical fish swimming around branching corals">
                     <div class="thumb-label">Coral Reef Ecosystem</div>
                 </div>
-
-                <!-- Gallery item 2 -->
                 <div class="gallery-item" tabindex="0" data-title="Sea Turtle Migration"
                     data-img="images/gallery/sea-turtle.jpg"
                     data-desc="Sea turtles travel thousands of kilometres between feeding and nesting grounds. Six of the seven sea turtle species are classified as threatened or endangered. Reducing plastic waste, protecting nesting beaches, and enforcing fishing regulations that include turtle-excluder devices are all actions that help these ancient mariners survive.">
@@ -221,8 +199,6 @@
                         alt="Green sea turtle gliding gracefully through clear blue water">
                     <div class="thumb-label">Sea Turtle Migration</div>
                 </div>
-
-                <!-- Gallery item 3 -->
                 <div class="gallery-item" tabindex="0" data-title="Mangrove Forests"
                     data-img="images/gallery/mangrove.jpg"
                     data-desc="Mangrove forests act as nurseries for young fish and protect coastlines from storm surges and erosion. They also store up to four times more carbon than tropical rainforests. Despite their importance, mangroves are being cleared at an alarming rate for aquaculture and coastal development. Restoration projects around the world are working to reverse this loss.">
@@ -230,8 +206,6 @@
                         alt="Dense mangrove roots submerged in shallow coastal water">
                     <div class="thumb-label">Mangrove Forests</div>
                 </div>
-
-                <!-- Gallery item 4 -->
                 <div class="gallery-item" tabindex="0" data-title="Deep Ocean Exploration"
                     data-img="images/gallery/deep-ocean.jpg"
                     data-desc="The deep ocean remains one of the least explored places on Earth. Scientists estimate that over 80% of the ocean is unmapped and unexplored. Deep-sea ecosystems host unique organisms adapted to extreme pressure and darkness. Protecting these environments from deep-sea mining and trawling is essential for preserving biodiversity we have yet to fully understand.">
@@ -239,8 +213,6 @@
                         alt="Bioluminescent jellyfish glowing in the dark depths of the ocean">
                     <div class="thumb-label">Deep Ocean Exploration</div>
                 </div>
-
-                <!-- Gallery item 5 -->
                 <div class="gallery-item" tabindex="0" data-title="Beach Cleanup Action"
                     data-img="images/gallery/beach-cleanup.jpg"
                     data-desc="Community beach cleanups are one of the most direct and impactful actions anyone can take. Events like the International Coastal Cleanup collect millions of kilograms of waste each year. As students, organising regular local cleanups raises awareness and keeps marine debris from entering the ocean.">
@@ -248,8 +220,6 @@
                         alt="Volunteers collecting plastic waste during a beach cleanup event">
                     <div class="thumb-label">Beach Cleanup Action</div>
                 </div>
-
-                <!-- Gallery item 6 -->
                 <div class="gallery-item" tabindex="0" data-title="Whale Conservation"
                     data-img="images/gallery/whale.jpg"
                     data-desc="Whales play a vital role in marine ecosystems. Their waste fertilises phytoplankton, which produces over half of the world's oxygen. Despite international bans, some whale populations remain critically low. Supporting whale sanctuaries and responsible whale-watching tourism helps protect these magnificent creatures.">
@@ -262,20 +232,15 @@
         </section>
 
     </main>
-    <!-- ===================================================
-         PAGE CONTENT — END
-    ==================================================== -->
 
-    <!-- Modal for extended view -->
     <div class="gallery-modal" id="galleryModal" role="dialog" aria-label="Image detail view">
         <div class="modal-content">
             <button class="modal-close" id="modalClose" aria-label="Close image view">&times;</button>
-            <img id="modalImg" src="" alt="">
+            <img id="modalImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Gallery image">
             <div class="modal-body" id="modalBody">
-                <h3 id="modalTitle"></h3>
+                <h3 id="modalTitle">Image Details</h3>
                 <p id="modalDesc"></p>
 
-                <!-- User customisation controls -->
                 <div class="modal-controls">
                     <div>
                         <label for="colorSelect">Colour scheme:</label>
@@ -299,9 +264,6 @@
         </div>
     </div>
 
-    <!-- ===================================================
-         SHARED FOOTER — START
-    ==================================================== -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
@@ -328,11 +290,7 @@
             <p>&copy; 2026 SDG Action Hub. Student coursework project.</p>
         </div>
     </footer>
-    <!-- ===================================================
-         SHARED FOOTER — END
-    ==================================================== -->
 
-    <!-- External JavaScript — Gallery interactivity -->
     <script src="js/gallery.js"></script>
 
 </body>

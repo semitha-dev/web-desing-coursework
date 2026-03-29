@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validation Page — Liyanaarachchi</title>
+    <title>Validation Page — Udula Liyanaarachchi</title>
     <link rel="stylesheet" href="css/pageEditor_validator.css">
 </head>
 <body>
     <header id="top"><h1>SDG Action Hub — Validation Report</h1></header>
-    <section class="stud"><h2>Liyanaarachchi (20240077) | Team SDG14 | User Profile &amp; Sitemap</h2></section>
+    <section class="stud"><h2>Udula Liyanaarachchi (20240077) | Team SDG14 | User Profile &amp; Sitemap</h2></section>
 
     <div class="container">
         <main>
             <section>
                 <h2 id="profileVal">User Profile Page Validation Report</h2>
                 <p>The User Profile page was validated with no errors. All JavaScript is correctly placed within a script element at the end of the body. The progress bar and profile output sections use valid HTML5 structure with div and table elements.</p>
+                <img src="validationSnapshots/student4/profilevalidation.png" alt="Profile page validation result">
                 <h3>Back to Page Editor</h3>
                 <p><a href="pageEditor_ST4.html#profile">View Profile Page technical description in Page Editor</a></p>
             </section>
@@ -22,6 +23,7 @@
             <section>
                 <h2 id="sitemapVal">Sitemap Page Validation Report</h2>
                 <p>The Sitemap page with inline SVG passed validation with no errors. All SVG elements including rect, text, line, and anchor elements are valid. The viewBox attribute and responsive width settings comply with SVG and HTML5 specifications.</p>
+                <img src="validationSnapshots/student4/sitemapvalidation.png" alt="Sitemap page validation result">
                 <h3>Back to Page Editor</h3>
                 <p><a href="pageEditor_ST4.html#sitemap">View Sitemap Page technical description in Page Editor</a></p>
             </section>
@@ -29,6 +31,7 @@
             <section>
                 <h2 id="contentVal">Content Page Validation Report</h2>
                 <p>The Content Page (Coral Reef Restoration) validated with no errors. All sections have proper heading hierarchy, images include alt text, and internal anchor links reference valid id attributes.</p>
+                <img src="validationSnapshots/student4/contentvalidation.png" alt="Content page validation result">
                 <h3>Back to Page Editor</h3>
                 <p><a href="pageEditor_ST4.html#content">View Content Page technical description in Page Editor</a></p>
             </section>
@@ -37,6 +40,9 @@
                 <h2 id="reflection">Reflection on Validation</h2>
                 <p>The SVG sitemap initially produced a validation warning about missing namespace declarations. Adding the correct <code>xmlns</code> attribute to the SVG element resolved this. I also had an error where an SVG <code>&lt;text&gt;</code> element contained an ampersand that was not escaped — changing it to <code>&amp;amp;</code> fixed the issue.</p>
                 <p>For the profile page, validation was straightforward since the page uses minimal HTML and relies primarily on JavaScript for dynamic content. This highlighted how pages with less static HTML tend to have fewer validation issues.</p>
+                <p>During validation, I encountered several warnings on the Profile page related to missing section headings. Multiple <code>&lt;section&gt;</code> elements did not include appropriate heading tags, which caused warnings about lacking identifiable structure. I resolved this by adding suitable heading elements (such as <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code>) to each section, ensuring proper semantic organization and improving accessibility.</p>
+                <p>Additionally, in the Content page, there was a heading hierarchy error where an <code>&lt;h3&gt;</code> element followed an <code>&lt;h1&gt;</code> directly, skipping the <code>&lt;h2&gt;</code> level. This was corrected by adjusting the heading structure to follow a proper sequential order.</p>
+                <p>Through this validation process, I learned the importance of maintaining correct semantic HTML structure, especially using proper heading levels and ensuring that all sections are clearly defined. It also highlighted the need to validate pages continuously during development to catch structural issues early.</p>
             </section>
 
             <p class="top"><a href="#top">Go top</a></p>
